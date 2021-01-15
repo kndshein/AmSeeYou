@@ -1,6 +1,6 @@
-<img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" width=100/>
+<img src="https://i.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.webp" width=100/>
 
-![Alt Text](https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif)
+![Alt Text](https://i.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.webp)
 
 # Project Overview
 
