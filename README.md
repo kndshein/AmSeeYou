@@ -1,7 +1,5 @@
 <img src="https://i.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.webp" width=100/>
 
-![Alt Text](https://i.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.webp)
-
 # Project Overview
 
 ## Project Links
