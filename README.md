@@ -1,70 +1,168 @@
+<img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" width=100/>
+
 # Project Overview
 
 ## Project Links
 
-- [add your github repo link]()
+- [Github Repo Link](https://github.com/kndshein/ProjectTwo)
 - [add your deployment link]()
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+A website that lists the chronological order of the Marvel Cinematic Universe.
 
 ## API
 
-Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project.
+<details>
+<summary>Sample API element</summary>
 
 ```
-{data: {} }
+{
+"adult": false,
+"backdrop_path": "/52AfXWuXCHn3UjD17rBruA9f5qb.jpg",
+"belongs_to_collection": null,
+"budget": 63000000,
+"genres": [
+{
+"id": 18,
+"name": "Drama"
+}
+],
+"homepage": "http://www.foxmovies.com/movies/fight-club",
+"id": 550,
+"imdb_id": "tt0137523",
+"original_language": "en",
+"original_title": "Fight Club",
+"overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+"popularity": 46.209,
+"poster_path": "/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
+"production_companies": [
+{
+"id": 508,
+"logo_path": "/7PzJdsLGlR7oW4J0J5Xcd0pHGRg.png",
+"name": "Regency Enterprises",
+"origin_country": "US"
+},
+{
+"id": 711,
+"logo_path": "/tEiIH5QesdheJmDAqQwvtN60727.png",
+"name": "Fox 2000 Pictures",
+"origin_country": "US"
+},
+{
+"id": 20555,
+"logo_path": "/hD8yEGUBlHOcfHYbujp71vD8gZp.png",
+"name": "Taurus Film",
+"origin_country": "DE"
+},
+{
+"id": 54051,
+"logo_path": null,
+"name": "Atman Entertainment",
+"origin_country": ""
+},
+{
+"id": 54052,
+"logo_path": null,
+"name": "Knickerbocker Films",
+"origin_country": "US"
+},
+{
+"id": 25,
+"logo_path": "/qZCc1lty5FzX30aOCVRBLzaVmcp.png",
+"name": "20th Century Fox",
+"origin_country": "US"
+},
+{
+"id": 4700,
+"logo_path": "/A32wmjrs9Psf4zw0uaixF0GXfxq.png",
+"name": "The Linson Company",
+"origin_country": ""
+}
+],
+"production_countries": [
+{
+"iso_3166_1": "DE",
+"name": "Germany"
+},
+{
+"iso_3166_1": "US",
+"name": "United States of America"
+}
+],
+"release_date": "1999-10-15",
+"revenue": 100853753,
+"runtime": 139,
+"spoken_languages": [
+{
+"english_name": "English",
+"iso_639_1": "en",
+"name": "English"
+}
+],
+"status": "Released",
+"tagline": "Mischief. Mayhem. Soap.",
+"title": "Fight Club",
+"video": false,
+"vote_average": 8.4,
+"vote_count": 20851
+}
 ```
+
+</details>
 
 ## Wireframes
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [add link to your wireframes]()
-- [add link to your react architecture]()
+- [Wireframe](https://www.figma.com/file/lKAuxw68qqgsy6NxgvIAEa/Am-See-You)
+- [React Achitecture](https://docs.google.com/drawings/d/1uBYvkX6U5aEzU8OGx2h4QJoasdffDffz4WDwXbvyJf0/edit)
 
-### MVP/PostMVP - 5min
+### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
+#### MVP
 
-#### MVP EXAMPLE
-
-- Find and use external api
+- Use a movie database api
 - Render data on page
 - Allow user to interact with the page
+- List all MCU films in chronological order
+- Watched list
 
-#### PostMVP EXAMPLE
+#### PostMVP
 
-- Add localStorage or firebase for storage
+- Include TV shows in the list
+- Change splash image on hover
 
-## Components
+## Time Frame
 
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
+#### MVP
 
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
+| Component                         | Priority | Estimated Time | Actual Time |
+| --------------------------------- | :------: | :------------: | :---------: |
+| React: Setup Components           |    H     |      1 hr      |   -- hrs    |
+| React: API + Mapping              |    H     |     3 hrs      |   -- hrs    |
+| React: HandleClick + Watched List |    H     |     5 hrs      |   -- hrs    |
+| Deploy on Netlify                 |    H     |     0.5 hr     |   -- hrs    |
+| Prep for Styling                  |    M     |     2 hrs      |   -- hrs    |
+| CSS for Movie list                |    M     |     1 hrs      |   -- hrs    |
+| CSS for Watched List              |    M     |     1 hrs      |   -- hrs    |
+| CSS for Pages                     |    L     |     4 hrs      |   -- hrs    |
+| Total                             |    H     |    17.5 hrs    |   -- hrs    |
 
-| Component |                          Description                          |
-| --------- | :-----------------------------------------------------------: |
-| App       | This will make the initial data pull and include React Router |
-| Header    |          This will render the header include the nav          |
-| Footer    |          This will render the header include the nav          |
+#### Post-MVP
 
-Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
-
-| Component        | Priority | Estimated Time | Time Invetsted | Actual Time |
-| ---------------- | :------: | :------------: | :------------: | :---------: |
-| Adding Form      |    H     |      3hrs      |     3.5hrs     |   3.5hrs    |
-| Working with API |    H     |      3hrs      |     2.5hrs     |   2.5hrs    |
-| Total            |    H     |      6hrs      |      5hrs      |    5hrs     |
+| Component                              | Priority | Estimated Time | Actual Time |
+| -------------------------------------- | :------: | :------------: | :---------: |
+| React: Click to show description       |    H     |     2 hrs      |   -- hrs    |
+| CSS for splash screen                  |    L     |     4 hrs      |   -- hrs    |
+| CSS tabs for Movie List & Watched List |    L     |     3 hrs      |   -- hrs    |
+| Total                                  |    H     |     9 hrs      |   -- hrs    |
 
 ## Additional Libraries
 
-Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc.
+- React-router-dom
 
 ## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
 
 ```
 function reverse(string) {
