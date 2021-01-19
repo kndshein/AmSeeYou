@@ -4,13 +4,15 @@ import SingleMovie from "../components/SingleMovie";
 const MoviesList = (props) => {
   const [moviesListState, setMoviesListState] = React.useState(null);
 
-  const apiKey = "643214fbabd864e3d0973b3b771ffa40";
+  const { REACT_APP_APIKEY } = process.env;
+
+  // const apiKey = "643214fbabd864e3d0973b3b771ffa40";
 
   const getAllMovies = () => {
     // generate a promise for each movies data using async callback to map
     const arrayOfPromises = props.moviesList.map(async (movie) => {
       const response = await fetch(
-        `https://api.themoviedb.org/3/${movie.type}/${movie.id}?api_key=${apiKey}&language=en-US`
+        `https://api.themoviedb.org/3/${movie.type}/${movie.id}?api_key=${REACT_APP_APIKEY}&language=en-US`
       );
       const data = await response.json();
       return data; // each loop will return the data in the new array

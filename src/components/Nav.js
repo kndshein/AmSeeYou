@@ -7,6 +7,7 @@ const Nav = (props) => {
       <Link to="/" className="nav-list">
         Movies List
       </Link>
+      <img src="https://media.giphy.com/media/XmppNRlrlu2SA/giphy.gif" />
       <Link to="/watched" className="nav-list">
         Watched List
       </Link>

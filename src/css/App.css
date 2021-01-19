@@ -9,6 +9,12 @@
   background-color: #252525;
 }
 
+.nav-bar img {
+  object-fit: fill;
+  border-radius: 50%;
+  width: 200px;
+}
+
 .nav-list {
   margin-left: 40px;
   margin-right: 40px;
