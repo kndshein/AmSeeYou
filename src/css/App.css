@@ -38,11 +38,15 @@
 }
 
 .movies-list {
-  position: relative;
   display: flex;
   flex-flow: row nowrap;
-  height: 88vh;
+  height: 85vh;
   padding: 4vh 0 4vh 0;
+  /* overflow-x: scroll; */
+}
+
+.movies-list::-webkit-scrollbar {
+  display: none;
 }
 
 .single-movie {
@@ -53,6 +57,10 @@
   cursor: pointer;
   overflow: hidden;
   transition: ease-in-out 0.3s;
+}
+
+.single-movie:last-of-type {
+  margin-right: 300px;
 }
 
 .single-movie:hover {

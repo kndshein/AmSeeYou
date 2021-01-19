@@ -1,7 +1,8 @@
 .App {
+  position: absolute;
   height: 100%;
   width: 100%;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 body {
@@ -11,11 +12,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* position: absolute; */
   background-color: #121212;
-  overflow-y: hidden;
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {
