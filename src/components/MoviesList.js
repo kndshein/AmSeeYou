@@ -1,4 +1,5 @@
 import React from "react";
+
 import SingleMovie from "../components/SingleMovie";
 
 const MoviesList = (props) => {
@@ -29,9 +30,9 @@ const MoviesList = (props) => {
   }, []);
 
   return (
-    <div className="movies-list">
+    <>
       <SingleMovie moviesListState={moviesListState} />
-    </div>
+    </>
   );
 };
 export default MoviesList;

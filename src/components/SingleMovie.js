@@ -1,4 +1,5 @@
 import React from "react";
+import { Frame, Scroll } from "framer";
 
 const SingleMovie = (props) => {
   console.log("singleMovie props", props);
@@ -26,6 +27,7 @@ const SingleMovie = (props) => {
           <div className="movie-backdrop">
             <img
               src={`https://image.tmdb.org/t/p/original${element.backdrop_path}`}
+              alt={element.original_title}
             />
           </div>
           <div className="movie-title">{element.original_title}</div>
