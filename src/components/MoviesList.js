@@ -1,4 +1,5 @@
 import React from "react";
+import HorizontalScroll from "react-scroll-horizontal";
 
 import SingleMovie from "../components/SingleMovie";
 
@@ -28,9 +29,11 @@ const MoviesList = (props) => {
   }, []);
 
   return (
-    <>
-      <SingleMovie moviesListState={moviesListState} />
-    </>
+    <div className="movies-list">
+      <HorizontalScroll reverseScroll={true} dragging={true}>
+        <SingleMovie moviesListState={moviesListState} />
+      </HorizontalScroll>
+    </div>
   );
 };
 export default MoviesList;

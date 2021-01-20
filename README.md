@@ -161,6 +161,9 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 ## Additional Libraries
 
 - React-router-dom
+- React Horizontal Scroll
+
+https://www.npmjs.com/package/react-scroll-horizontal
 
 ## Code Snippet
 
