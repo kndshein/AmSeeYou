@@ -40,7 +40,7 @@
 .movies-list {
   display: flex;
   flex-flow: row nowrap;
-  height: 85vh;
+  height: 87vh;
   padding: 4vh 0 4vh 0;
   /* overflow-x: scroll; */
 }
@@ -57,10 +57,6 @@
   cursor: pointer;
   overflow: hidden;
   transition: ease-in-out 0.3s;
-}
-
-.single-movie:last-of-type {
-  margin-right: 300px;
 }
 
 .single-movie:hover {

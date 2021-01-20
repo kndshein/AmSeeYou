@@ -7,8 +7,6 @@ const MoviesList = (props) => {
 
   const { REACT_APP_APIKEY } = process.env;
 
-  // const apiKey = "643214fbabd864e3d0973b3b771ffa40";
-
   const getAllMovies = () => {
     // generate a promise for each movies data using async callback to map
     const arrayOfPromises = props.moviesList.map(async (movie) => {
