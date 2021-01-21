@@ -1,4 +1,6 @@
 .genres-list {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 20px;
   width: 100%;
 }
@@ -9,32 +11,32 @@
 .genre-drama,
 .genre-fantasy,
 .genre-science-fiction {
-  padding: 7px;
-  padding-left: 15px;
-  margin: 10px 0 10px 0;
+  padding: 8px;
+  margin: 5px 10px 5px 5px;
   color: white;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0, 5);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .genre-action {
-  background-color: red;
+  box-shadow: -5px 0 0 0 rgb(255, 85, 85);
 }
 .genre-adventure {
-  background-color: red;
+  box-shadow: -5px 0 0 0 rgb(158, 84, 255);
 }
 .genre-comedy {
-  background-color: red;
+  box-shadow: -5px 0 0 0 rgb(255, 223, 82);
 }
 .genre-drama {
-  background-color: red;
+  box-shadow: -5px 0 0 0 rgb(255, 136, 57);
 }
 .genre-fantasy {
-  background-color: red;
+  box-shadow: -5px 0 0 0 rgb(96, 255, 81);
 }
 .genre-science-fiction {
-  background-color: red;
+  box-shadow: -5px 0 0 0 rgb(69, 196, 255);
 }
