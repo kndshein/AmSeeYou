@@ -91,6 +91,12 @@ const SingleMovie = (props) => {
             <h2>{element.original_title}</h2>
           </div>
           <div className="movie-active-container">
+            <div className="movie-active-top">
+              <div className="movie-active-title">
+                <h1>{element.original_title}</h1>
+              </div>
+              <div className="movie-active-tagline">{element.tagline}</div>
+            </div>
             <div className="movie-active-left">
               <div className="movie-poster">
                 <img
@@ -99,12 +105,6 @@ const SingleMovie = (props) => {
                 />
               </div>
               <GenresList genres={element.genres} />
-            </div>
-            <div className="movie-active-top">
-              <div className="movie-active-title">
-                <h1>{element.original_title}</h1>
-              </div>
-              <div className="movie-active-tagline">{element.tagline}</div>
             </div>
             <div className="movie-active-right">
               <div className="movie-active-subtitle">

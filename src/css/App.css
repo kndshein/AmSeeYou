@@ -97,10 +97,6 @@
   transition: ease-in-out 0.3s;
 }
 
-.single-movie.active .movie-backdrop {
-  /* background-color: black; */
-}
-
 .single-movie.active .movie-backdrop img {
   filter: blur(20px);
   opacity: 0.2;
@@ -120,7 +116,7 @@
   white-space: nowrap;
   transform: rotate(-90deg);
   transform-origin: top left;
-  transition: ease-in-out 0.3s;
+  transition: color ease-in-out 0.3s;
 }
 
 .movie-title::after {
@@ -140,7 +136,7 @@
   transform: skew(-30deg);
   z-index: -1;
   box-shadow: 10px 0 0 rgba(255, 255, 255, 0.3);
-  transition: ease-in-out 0.3s;
+  transition: color ease-in-out 0.3s;
 }
 
 .movie-title h2 {
@@ -151,6 +147,11 @@
 .single-movie:hover .movie-title,
 .single-movie.active .movie-title {
   color: rgba(255, 255, 255, 0.69);
+  transition: ease-in-out 0.3s;
+}
+
+.single-movie.active .movie-title {
+  color: rgba(110, 110, 110, 0.5);
   transition: ease-in-out 0.3s;
 }
 
@@ -167,7 +168,7 @@
 
 @media only screen and (max-width: 768px) {
   .single-movie.active .movie-title {
-    display: none;
+    opacity: 0;
   }
 }
 
@@ -210,6 +211,25 @@
 .movie-active-right {
   grid-area: 2 / 2 / 3 / 3;
   padding-right: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .movie-active-container {
+    padding: 20px;
+    overflow: auto;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .movie-active-container {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+  }
+
+  .movie-active-right {
+    padding: 0;
+  }
 }
 
 /* movie poster */
@@ -290,7 +310,13 @@
 .movie-active-overview {
   margin-top: 30px;
   color: grey;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  font-size: max(1.2rem, 1.2vw);
+  line-height: max(1.5rem, 1.5vw);
   width: 100%;
+}
+
+@media only screen and (max-width: 425px) {
+  .movie-active-overview {
+    margin-top: 15px;
+  }
 }
