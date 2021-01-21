@@ -1,4 +1,5 @@
 import React from "react";
+import GenresList from "./GenresList";
 
 const SingleMovie = (props) => {
   console.log("singleMovie props", props);
@@ -33,11 +34,20 @@ const SingleMovie = (props) => {
             <h2>{element.original_title}</h2>
           </div>
           <div className="movie-active-container">
-            <div className="movie-poster">
-              <img
-                src={`https://image.tmdb.org/t/p/original${element.poster_path}`}
-                alt={element.original_title}
-              />
+            <div className="movie-active-left">
+              <div className="movie-poster">
+                <img
+                  src={`https://image.tmdb.org/t/p/w342${element.poster_path}`}
+                  alt={element.original_title}
+                />
+              </div>
+              <GenresList genres={element.genres} />
+            </div>
+            <div className="movie-active-right">
+              <div className="movie-active-title">
+                <h1>{element.original_title}</h1>
+              </div>
+              <div className="movie-active-tagline">{element.tagline}</div>
             </div>
           </div>
         </div>

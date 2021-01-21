@@ -10,7 +10,7 @@
   bottom: 0;
   width: 100%;
   height: max(5vh, 40px);
-  background-color: #252525;
+  background-color: var(--main);
   z-index: 10;
 }
 
@@ -22,7 +22,7 @@
   width: 150px;
   height: 150px;
   overflow: hidden;
-  box-shadow: 0 0 0 10px #252525;
+  box-shadow: 0 0 0 10px var(--main);
 }
 
 .nav-bar .img-container img {
@@ -48,8 +48,8 @@
 .movies-list {
   display: flex;
   align-items: center;
-  height: 90vh;
-  padding: 2vh 0 4vh 0;
+  height: 95vh;
+  padding: 1vh 0 1vh 0;
 }
 
 /***************/
@@ -76,7 +76,7 @@
 
 .single-movie:hover,
 .single-movie.active {
-  box-shadow: 0 0 5px #66c0cc, 0 0 15px #2d6472;
+  box-shadow: 0 0 5px var(--liteAccent), 0 0 15px var(--accent);
 }
 
 .movie-backdrop {
@@ -94,7 +94,7 @@
 
 .single-movie.active {
   /* flex: 4; */
-  min-width: 20%;
+  min-width: min(20%, 80vw);
   transition: ease-in-out 0.3s;
 }
 
@@ -115,9 +115,9 @@
 .movie-title {
   position: absolute;
   margin: 0;
-  padding: 3px 7px 3px 15px;
+  padding: 2px 7px 3px 15px;
   left: 0;
-  color: rgba(69, 69, 69, 0.69);
+  color: var(--liteMain);
   white-space: nowrap;
   transform: rotate(-90deg);
   transform-origin: top left;
@@ -132,7 +132,7 @@
   padding-right: 35px;
   width: 100%;
   height: 100%;
-  background: #252525;
+  background: rgba(37, 37, 37, 0.75);
   -webkit-transform-origin: 100% 0;
   -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
@@ -141,6 +141,7 @@
   transform: skew(-30deg);
   z-index: -1;
   box-shadow: 10px 0 0 rgba(255, 255, 255, 0.3);
+  transition: ease-in-out 0.3s;
 }
 
 .movie-title h2 {
@@ -156,41 +157,81 @@
 
 .single-movie:hover .movie-title::after,
 .single-movie.active .movie-title::after {
-  box-shadow: 10px 0 0 rgba(68, 206, 224, 0.69), 0 0 10px black;
+  box-shadow: 10px 0 0 var(--liteAccent);
   transition: ease-in-out 0.3s;
 }
 
 .single-movie.active .movie-title::after {
-  padding-right: 100%;
+  box-shadow: 0 0 10px var(--background);
+  padding-right: 1000px;
   transition: ease-in-out 0.3s;
 }
 
 /****************/
 /* MOVIE ACTIVE */
 /****************/
+
 .movie-active-container {
   display: none;
+  /* opacity: 0; */
   position: absolute;
+  padding: 30px 30px 30px 80px;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+  transition: ease-in-out 0.5s;
+  gap: 30px;
 }
 
 .single-movie.active .movie-active-container {
-  display: block;
+  display: grid;
+  grid-template-columns: fit-content(200px);
+
+  /* opacity: 1;
+  transition: ease-in-out 0.5s; */
+}
+
+.movie-active-left {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.movie-active-right {
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 /* movie poster */
 .movie-poster {
-  width: 400px;
-  height: 600px;
+  position: relative;
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .movie-poster img {
-  display: none;
   object-fit: cover;
   overflow: hidden;
   width: 100%;
   height: 100%;
+}
+
+/* movie active title  */
+
+.movie-active-title h1 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+/* movie active tagline */
+.movie-active-tagline {
+  margin: 10px 5px 10px 0;
+  color: rgb(110, 110, 110);
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }

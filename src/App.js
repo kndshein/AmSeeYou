@@ -1,4 +1,3 @@
-import "./css/App.css";
 import { Switch, Route } from "react-router-dom";
 
 import AllMovies from "./pages/AllMovies";

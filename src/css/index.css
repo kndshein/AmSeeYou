@@ -1,17 +1,34 @@
 @import url("https://use.typekit.net/qhq1mem.css");
 
+:root {
+  /* MAIN COLORS */
+  --background: rgb(18, 18, 18);
+  --liteMain: rgb(110, 110, 110);
+  --main: rgb(37, 37, 37);
+  --liteAccent: rgb(102, 192, 204);
+  --accent: rgb(45, 100, 114);
+  --code: red;
+
+  /* FONTS */
+  --title: rift, sans-serif;
+  --text: mr-eaves-xl-modern, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--text);
+  font-weight: 400;
+  font-weight: normal;
+}
+
 body {
   height: 100%;
   margin: 0;
-  font-family: mr-eaves-xl-modern, sans-serif;
-  font-weight: 300;
-  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -ms-overflow-style: none;
   scrollbar-width: none;
   background-color: #121212;
-  /* box-sizing: border-box; */
 }
 
 body::-webkit-scrollbar {
@@ -23,8 +40,10 @@ code {
     monospace;
 }
 
+h1,
 h2 {
   font-family: rift, sans-serif;
   font-weight: 700;
   font-style: normal;
+  letter-spacing: 2px;
 }
