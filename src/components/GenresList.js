@@ -47,9 +47,11 @@ const GenresList = (props) => {
     return className;
   };
 
-  const GenresListMap = props.genres.map((element) => {
+  const GenresListMap = props.genres.map((element, index) => {
     return (
-      <div className={`${classNameColor(element.id)}`}>{element.name}</div>
+      <div className={`${classNameColor(element.id)}`} key={index}>
+        {element.name}
+      </div>
     );
   });
 
