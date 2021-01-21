@@ -1,6 +1,6 @@
 .genres-list {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   margin-top: 20px;
   width: 100%;
 }
@@ -11,10 +11,10 @@
 .genre-drama,
 .genre-fantasy,
 .genre-science-fiction {
-  padding: 8px;
-  margin: 5px 10px 5px 5px;
+  padding: 10px;
+  margin: 10px 0 10px 5px;
   color: white;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
