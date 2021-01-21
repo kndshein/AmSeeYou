@@ -50,6 +50,13 @@
   align-items: center;
   height: 95vh;
   padding: 1vh 0 1vh 0;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.movies-list::-webkit-scrollbar {
+  display: none;
 }
 
 /***************/
@@ -59,8 +66,6 @@
 .single-movie {
   position: relative;
   align-self: center;
-  /* flex: 0.5;
-  flex-shrink: 0; */
   min-width: 200px;
   height: 95%;
   border-radius: 10px;
@@ -93,7 +98,7 @@
 }
 
 .single-movie.active {
-  min-width: min(16%, 80vw);
+  min-width: min(40%, 80vw);
   transition: ease-in-out 0.3s;
 }
 
@@ -178,7 +183,7 @@
 
 .movie-active-container {
   display: grid;
-  grid-template-rows: fit-content(100px);
+  grid-template-rows: fit-content(100px) auto;
   grid-template-columns: 25% 75%;
   opacity: 0;
   position: absolute;

@@ -30,9 +30,7 @@ const MoviesList = (props) => {
 
   return (
     <div className="movies-list">
-      <HorizontalScroll reverseScroll={true} dragging={true}>
-        <SingleMovie moviesListState={moviesListState} />
-      </HorizontalScroll>
+      <SingleMovie moviesListState={moviesListState} />
     </div>
   );
 };

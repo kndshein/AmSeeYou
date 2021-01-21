@@ -14,6 +14,10 @@
   --text: mr-eaves-xl-modern, sans-serif;
 }
 
+/* .App {
+  overflow-y: hidden;
+} */
+
 * {
   box-sizing: border-box;
   font-family: var(--text);

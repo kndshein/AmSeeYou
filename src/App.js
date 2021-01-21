@@ -8,14 +8,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Switch>
-        <Route exact path="/">
-          <AllMovies />
-        </Route>
-        <Route path="/watched">
-          <WatchedMovies />
-        </Route>
-      </Switch>
+      <AllMovies />
     </div>
   );
 }
