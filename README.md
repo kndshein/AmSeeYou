@@ -5,7 +5,7 @@
 ## Project Links
 
 - [Github Repo Link](https://github.com/kndshein/ProjectTwo)
-- [add your deployment link]()
+- [Deployment Link](https://amseeyou.netlify.app)
 
 ## Project Description
 
@@ -139,29 +139,28 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 | Component                         | Priority | Estimated Time | Actual Time |
 | --------------------------------- | :------: | :------------: | :---------: |
-| React: Setup Components           |    H     |      1 hr      |   -- hrs    |
-| React: API + Mapping              |    H     |     3 hrs      |   -- hrs    |
-| React: HandleClick + Watched List |    H     |     5 hrs      |   -- hrs    |
-| Deploy on Netlify                 |    H     |     0.5 hr     |   -- hrs    |
-| Prep for Styling                  |    M     |     2 hrs      |   -- hrs    |
-| CSS for Movie list                |    M     |     1 hrs      |   -- hrs    |
-| CSS for Watched List              |    M     |     1 hrs      |   -- hrs    |
-| CSS for Pages                     |    L     |     4 hrs      |   -- hrs    |
-| Total                             |    H     |    17.5 hrs    |   -- hrs    |
+| React: Setup Components           |    H     |      1 hr      |    5 hrs    |
+| React: API + Mapping              |    H     |     3 hrs      |    3 hrs    |
+| React: HandleClick + Watched List |    H     |     5 hrs      |    2 hrs    |
+| Deploy on Netlify                 |    H     |     0.5 hr     |    1 hrs    |
+| Prep for Styling                  |    M     |     2 hrs      |    5 hrs    |
+| CSS for Movie list                |    M     |     1 hrs      |   15 hrs    |
+| CSS for Watched List              |    M     |     1 hrs      |   1.5 hrs   |
+| CSS for Pages                     |    L     |     4 hrs      |   N/A hrs   |
+| Total                             |    H     |    17.5 hrs    |  32.5 hrs   |
 
 #### Post-MVP
 
 | Component                              | Priority | Estimated Time | Actual Time |
 | -------------------------------------- | :------: | :------------: | :---------: |
-| React: Click to show description       |    H     |     2 hrs      |   -- hrs    |
-| CSS for splash screen                  |    L     |     4 hrs      |   -- hrs    |
-| CSS tabs for Movie List & Watched List |    L     |     3 hrs      |   -- hrs    |
-| Total                                  |    H     |     9 hrs      |   -- hrs    |
+| React: Click to show description       |    H     |     2 hrs      |    4 hrs    |
+| CSS for splash screen                  |    L     |     4 hrs      |   N/A hrs   |
+| CSS tabs for Movie List & Watched List |    L     |     3 hrs      |   N/A hrs   |
+| Total                                  |    H     |     9 hrs      |    4 hrs    |
 
 ## Additional Libraries
 
 - React-router-dom
-- React Horizontal Scroll
 
 https://www.npmjs.com/package/react-scroll-horizontal
 
