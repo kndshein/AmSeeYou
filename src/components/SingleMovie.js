@@ -104,11 +104,11 @@ const SingleMovie = (props) => {
                 />
               </div>
               <GenresList genres={element.genres} />
-              <div className="addWatched">
+              {/* <div className="addWatched">
                 <button onClick={() => props.handleClickAddWatched(element)}>
                   hello
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="movie-active-right">
               <div className="movie-active-subtitle">
