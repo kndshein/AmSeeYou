@@ -31,7 +31,10 @@ const AllMovies = (props) => {
 
   return (
     <div className="all-movies">
-      <MoviesList moviesList={moviesList} />
+      <MoviesList
+        moviesList={moviesList}
+        handleClickAddWatched={props.handleClickAddWatched}
+      />
     </div>
   );
 };

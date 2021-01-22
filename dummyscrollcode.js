@@ -1,3 +1,19 @@
+// function App() {
+//     return (
+//       <div className="App">
+//         <Nav />
+//         <Switch>
+//           <Route exact path="/">
+//             <AllMovies />
+//           </Route>
+//           <Route path="/watched">
+//             <WatchedMovies />
+//           </Route>
+//         </Switch>
+//       </div>
+//     );
+//   }
+
 // var edgeSize = 200;
 // window.addEventListener("mousemove", handleMousemove);
 

@@ -5,12 +5,7 @@
   width: 100%;
 }
 
-.genre-action,
-.genre-adventure,
-.genre-comedy,
-.genre-drama,
-.genre-fantasy,
-.genre-science-fiction {
+.genres-list div {
   padding: 10px;
   margin: 10px 0 10px 5px;
   color: white;
@@ -40,3 +35,9 @@
 .genre-science-fiction {
   box-shadow: -5px 0 0 0 rgb(69, 196, 255);
 }
+
+/* @media only screen and (max-width: 1024px) {
+  .genres-list div {
+    font-size: 1rem;
+  }
+} */
