@@ -163,11 +163,3 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 - React-router-dom
 
 https://www.npmjs.com/package/react-scroll-horizontal
-
-## Code Snippet
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
