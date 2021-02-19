@@ -77,8 +77,11 @@
   transition: ease-in-out 0.3s;
 }
 
-.single-movie:last-of-type {
-  margin-right: 30px;
+#empty-margin {
+  content: " ";
+  display: block;
+  min-width: 30px;
+  min-height: 200px;
 }
 
 .single-movie:hover,

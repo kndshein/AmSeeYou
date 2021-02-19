@@ -131,7 +131,12 @@ const SingleMovie = (props) => {
       );
     });
 
-    return <>{singleMovieMap}</>;
+    return (
+      <>
+        {singleMovieMap}
+        <div id="empty-margin"></div>
+      </>
+    );
   };
 
   const loading = () => {
