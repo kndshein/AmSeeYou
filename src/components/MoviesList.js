@@ -25,13 +25,13 @@ const MoviesList = (props) => {
     Promise.all(getAllMovies())
       // The returned values from promise.all can then be handled in the callback via .then that'll run when Promise.all complete
       .then((arrayOfData) => setMoviesListState(arrayOfData));
-  });
+  }, []);
 
   return (
     <div className="movies-list">
       <SingleMovie
         moviesListState={moviesListState}
-        handleClickAddWatched={props.handleClickAddWatched}
+        // handleClickAddWatched={props.handleClickAddWatched}
       />
     </div>
   );

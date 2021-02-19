@@ -33,7 +33,7 @@ const AllMovies = (props) => {
     <div className="all-movies">
       <MoviesList
         moviesList={moviesList}
-        handleClickAddWatched={props.handleClickAddWatched}
+        // handleClickAddWatched={props.handleClickAddWatched}
       />
     </div>
   );
