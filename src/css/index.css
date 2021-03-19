@@ -19,6 +19,7 @@
   font-family: var(--text);
   font-weight: 400;
   font-weight: normal;
+  user-select: none;
   /* letter-spacing: 1px; */
 }
 
