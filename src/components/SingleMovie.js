@@ -2,7 +2,7 @@ import React from "react";
 import GenresList from "./GenresList";
 
 const SingleMovie = (props) => {
-  // console.log("singleMovie props", props);
+  console.log("singleMovie props", props);
 
   const [toggleState, setToggleState] = React.useState(null);
 
