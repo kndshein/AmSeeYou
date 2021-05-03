@@ -1,10 +1,7 @@
 import React from "react";
 
-// Code to see how many different types of genres there are (part 1/2)
-// const genresVariety = [];
-
 const GenresList = (props) => {
-  props.genres.sort(function (a, b) {
+  props.genres.sort((a, b) => {
     if (a.name < b.name) {
       return -1;
     }
@@ -15,12 +12,6 @@ const GenresList = (props) => {
   });
 
   const classNameColor = (e) => {
-    // Code to see how many different types of genres there are (part 2/2)
-    // if (genresVariety.indexOf(e) === -1) {
-    //   genresVariety.push(e);
-    // }
-    // console.log("genresVariety", genresVariety);
-
     var className;
     switch (e) {
       case 28:
