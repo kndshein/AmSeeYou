@@ -19,6 +19,7 @@ const AllMovies = (props) => {
     { type: "movie", id: "99861-avengers-age-of-ultron" },
     { type: "movie", id: "102899-ant-man" },
     { type: "movie", id: "271110-captain-america-civil-war" },
+    {type: "movie", id: "497698-black-widow"},
     { type: "movie", id: "315635-spider-man-homecoming" },
     { type: "movie", id: "284054-black-panther" },
     { type: "movie", id: "284052-doctor-strange" },
