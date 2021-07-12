@@ -32,6 +32,9 @@ const GenresList = (props) => {
       case 878:
         className = "genre-science-fiction";
         break;
+      case 53:
+        className = "genre-thriller";
+        break;
       default:
         className = "genre-none";
     }
