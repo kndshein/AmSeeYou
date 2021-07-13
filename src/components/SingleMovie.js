@@ -13,6 +13,12 @@ const SingleMovie = (props) => {
     }
   };
 
+  const handleKey = (event, index) => {
+    if (event.key === "Enter" || event.key === "Space") {
+      handleClick(index);
+    }
+  };
+
   const dateString = (e) => {
     const str = e;
     const year = str.substring(0, 4);
@@ -78,6 +84,7 @@ const SingleMovie = (props) => {
             toggleState?.active === index ? " active" : ""
           }`}
           onClick={() => handleClick(index)}
+          onKeyPress={(event) => handleKey(event, index)}
           tabIndex="0"
           key={index}
         >
