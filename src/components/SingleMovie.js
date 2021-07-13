@@ -14,7 +14,7 @@ const SingleMovie = (props) => {
   };
 
   const handleKey = (event, index) => {
-    if (event.key === "Enter" || event.key === "Space") {
+    if (event.key === "Enter" || event.key === " ") {
       handleClick(index);
     }
   };
