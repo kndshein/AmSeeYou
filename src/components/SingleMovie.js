@@ -2,8 +2,7 @@ import React from "react";
 import GenresList from "./GenresList";
 
 const SingleMovie = (props) => {
-  console.log("poop", props);
-  // console.log("singleMovie props", props);
+  console.log("singleMovie props", props.creditsListState);
 
   const [toggleState, setToggleState] = React.useState(null);
 
@@ -105,11 +104,6 @@ const SingleMovie = (props) => {
                 />
               </div>
               <GenresList genres={element.genres} />
-              {/* <div className="addWatched">
-                <button onClick={() => props.handleClickAddWatched(element)}>
-                  hello
-                </button>
-              </div> */}
             </div>
             <div className="movie-active-right">
               <div className="movie-active-subtitle">
@@ -117,13 +111,20 @@ const SingleMovie = (props) => {
                 <span className="dot">•</span>
                 <span className="date">{dateString(element.release_date)}</span>
                 <span className="dot">•</span>
-                <span className="country">
-                  {element.production_countries[0].iso_3166_1}
-                </span>
-                <span className="dot">•</span>
                 <span className="runtime">
                   {calculateRuntime(element.runtime)}
                 </span>
+              </div>
+              <div className="cast">
+                {props.creditsListState[index].cast
+                  .slice(0, 5)
+                  .map((actor, index) => {
+                    return (
+                      <div className="actor" key={index}>
+                        {actor.name}
+                      </div>
+                    );
+                  })}
               </div>
               <div className="movie-active-overview">{element.overview}</div>
             </div>
@@ -144,7 +145,7 @@ const SingleMovie = (props) => {
     return <></>;
   };
 
-  return props.moviesListState ? loaded() : loading();
+  return props.moviesListState && props.creditsListState ? loaded() : loading();
 };
 
 export default SingleMovie;

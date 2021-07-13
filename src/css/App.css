@@ -103,7 +103,7 @@
 }
 
 .single-movie.active {
-  min-width: 50%;
+  min-width: 60%;
   transition: ease-in-out 0.3s;
 }
 
@@ -197,7 +197,7 @@
 .movie-active-container {
   display: grid;
   grid-template-rows: fit-content(100px) auto;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 25% 75%;
   opacity: 0;
   position: absolute;
   padding: 30px 30px 30px 80px;
@@ -223,7 +223,7 @@
 
 .movie-active-left {
   grid-area: 2 / 1 / 3 / 2;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .movie-active-right {
@@ -306,7 +306,7 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
   width: 100%;
   font-family: var(--text);
   letter-spacing: 2px;
@@ -330,9 +330,25 @@
   border-radius: 5px;
 }
 
+/* movie cast */
+.cast {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 5px;
+  color: var(--liteAccent);
+}
+
+.actor {
+  padding: 5px 10px 5px 10px;
+  margin: 10px 10px 0 0;
+  font-size: max(1rem, 1vw);
+  background-color: var(--main);
+  border-radius: 5px;
+}
+
 /* movie active overview */
 .movie-active-overview {
-  margin-top: 30px;
+  margin-top: 10px;
   color: grey;
   font-size: max(1.2rem, 1.2vw);
   line-height: max(1.5rem, 1.5vw);
