@@ -78,6 +78,7 @@ const SingleMovie = (props) => {
             toggleState?.active === index ? " active" : ""
           }`}
           onClick={() => handleClick(index)}
+          tabIndex="0"
           key={index}
         >
           <div className="movie-backdrop">
