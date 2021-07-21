@@ -1,7 +1,7 @@
 import React from "react";
 
-const GenresList = (props) => {
-  props.genres.sort((a, b) => {
+const GenresList = ({ genres }) => {
+  genres.sort((a, b) => {
     if (a.name < b.name) {
       return -1;
     }
@@ -41,15 +41,17 @@ const GenresList = (props) => {
     return className;
   };
 
-  const GenresListMap = props.genres.map((element, index) => {
-    return (
-      <div className={`${classNameColor(element.id)}`} key={index}>
-        {element.name}
-      </div>
-    );
-  });
-
-  return <div className="genres-list">{GenresListMap}</div>;
+  return (
+    <div className="genres-list">
+      {genres.map((element, index) => {
+        return (
+          <div className={`${classNameColor(element.id)}`} key={index}>
+            {element.name}
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 export default GenresList;
