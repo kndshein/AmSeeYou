@@ -1,17 +1,10 @@
 import React from "react";
 
+import dateString from "../utilities/dateCalc";
+import runtimeString from "../utilities/runtimeCalc";
 import GenresList from "./GenresList";
 
-const Movie = ({
-  movieData,
-  index,
-  handleClick,
-  toggleState,
-  handleKey,
-  dateString,
-  calculateRuntime,
-  creditsListState,
-}) => {
+const Movie = ({ movieData, index, handleClick, toggleState, handleKey }) => {
   return (
     <div
       className={`single-movie${
@@ -56,7 +49,7 @@ const Movie = ({
             </span>
             <span className="dot">•</span>
             <span className="runtime">
-              {calculateRuntime(movieData.data.runtime)}
+              {runtimeString(movieData.data.runtime)}
             </span>
           </div>
           <div className="cast">
