@@ -2,7 +2,6 @@ import React from "react";
 
 import GenresList from "./GenresList";
 import dateString from "../utilities/dateCalc";
-import runtimeString from "../utilities/runtimeCalc";
 
 const Show = ({ showData }) => {
   return (
@@ -21,12 +20,17 @@ const Show = ({ showData }) => {
           <div className="movie-active-title">
             <h1>{showData.data.original_name}</h1>
           </div>
-          <div className="movie-active-tagline">{showData.data.tagline}</div>
+          <div className="movie-active-tagline">
+            Season {showData.media.season}, Episodes {showData.media.epiStart} -{" "}
+            {showData.media.epiEnd}
+          </div>
         </div>
         <div className="movie-active-left">
           <div className="movie-poster">
             <img
-              src={`https://image.tmdb.org/t/p/w342${showData.data.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w342${
+                showData.data.seasons[showData.media.season - 1].poster_path
+              }`}
               alt={showData.data.original_name}
             />
           </div>
@@ -36,13 +40,11 @@ const Show = ({ showData }) => {
           <div className="movie-active-subtitle">
             <span className="vote-average">{showData.data.vote_average}</span>
             <span className="dot">•</span>
-            {/* <span className="date">
-              {dateString(showData.data.release_date)}
-            </span> */}
-            <span className="dot">•</span>
-            {/* <span className="runtime">
-              {runtimeString(showData.data.runtime)}
-            </span> */}
+            <span className="date">
+              {dateString(
+                showData.data.seasons[showData.media.season - 1].air_date
+              )}
+            </span>
           </div>
           <div className="cast">
             {showData.data.credits.cast.slice(0, 5).map((actor, index) => {
@@ -53,7 +55,17 @@ const Show = ({ showData }) => {
               );
             })}
           </div>
-          <div className="movie-active-overview">{showData.data.overview}</div>
+          <div className="movie-active-overview">
+            {showData.data.seasons[1].overview}
+          </div>
+          <div>
+            {showData.data[`season/${showData.media.season}`].episodes
+              .slice(showData.media.epiStart, showData.media.epiEnd)
+              .map((element, index) => {
+                console.log("element", element);
+                return <div key={index}>{element.name}</div>;
+              })}
+          </div>
         </div>
       </div>
     </>

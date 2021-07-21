@@ -4,8 +4,6 @@ import Movie from "./Movie";
 import Show from "./Show";
 
 const SingleMovie = ({ mediaListState }) => {
-  console.log("singleMovie props", mediaListState);
-
   const [toggleState, setToggleState] = React.useState(null);
 
   const handleClick = (index) => {
