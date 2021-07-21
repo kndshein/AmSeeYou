@@ -2,7 +2,7 @@ import React from "react";
 
 import Movie from "./Movie";
 
-const SingleMovie = ({ mediaListState, creditsListState }) => {
+const SingleMovie = ({ mediaListState }) => {
   console.log("singleMovie props", mediaListState);
 
   const [toggleState, setToggleState] = React.useState(null);
@@ -92,7 +92,6 @@ const SingleMovie = ({ mediaListState, creditsListState }) => {
                 handleKey={handleKey}
                 dateString={dateString}
                 calculateRuntime={calculateRuntime}
-                creditsListState={creditsListState}
               />
             );
           } else {
@@ -108,7 +107,7 @@ const SingleMovie = ({ mediaListState, creditsListState }) => {
     return <></>;
   };
 
-  return mediaListState && creditsListState ? loaded() : loading();
+  return mediaListState ? loaded() : loading();
 };
 
 export default SingleMovie;

@@ -60,7 +60,7 @@ const Movie = ({
             </span>
           </div>
           <div className="cast">
-            {creditsListState[index].cast.slice(0, 5).map((actor, index) => {
+            {movieData.data.credits.cast.slice(0, 5).map((actor, index) => {
               return (
                 <div className="actor" key={index}>
                   {actor.name}
