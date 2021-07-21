@@ -1,5 +1,6 @@
 import React from "react";
-import GenresList from "./GenresList";
+
+import Movie from "./Movie";
 
 const SingleMovie = ({ mediaListState, creditsListState }) => {
   console.log("singleMovie props", mediaListState);
@@ -77,84 +78,28 @@ const SingleMovie = ({ mediaListState, creditsListState }) => {
   };
 
   const loaded = () => {
-    const singleMovieMap = mediaListState.map((element, index) => {
-      if (element.type === "movie") {
-        return (
-          <div
-            className={`single-movie${
-              toggleState?.active === index ? " active" : ""
-            }`}
-            onClick={() => handleClick(index)}
-            onKeyPress={(event) => handleKey(event, index)}
-            tabIndex="0"
-            key={index}
-          >
-            <div className="movie-backdrop">
-              <img
-                src={`https://image.tmdb.org/t/p/original${element.data.backdrop_path}`}
-                alt={element.data.original_title}
-              />
-            </div>
-            <div className="movie-title">
-              <h2>{element.data.original_title}</h2>
-            </div>
-            <div className="movie-active-container">
-              <div className="movie-active-top">
-                <div className="movie-active-title">
-                  <h1>{element.data.original_title}</h1>
-                </div>
-                <div className="movie-active-tagline">
-                  {element.data.tagline}
-                </div>
-              </div>
-              <div className="movie-active-left">
-                <div className="movie-poster">
-                  <img
-                    src={`https://image.tmdb.org/t/p/w342${element.data.poster_path}`}
-                    alt={element.data.original_title}
-                  />
-                </div>
-                <GenresList genres={element.data.genres} />
-              </div>
-              <div className="movie-active-right">
-                <div className="movie-active-subtitle">
-                  <span className="vote-average">
-                    {element.data.vote_average}
-                  </span>
-                  <span className="dot">•</span>
-                  <span className="date">
-                    {dateString(element.data.release_date)}
-                  </span>
-                  <span className="dot">•</span>
-                  <span className="runtime">
-                    {calculateRuntime(element.data.runtime)}
-                  </span>
-                </div>
-                <div className="cast">
-                  {creditsListState[index].cast
-                    .slice(0, 5)
-                    .map((actor, index) => {
-                      return (
-                        <div className="actor" key={index}>
-                          {actor.name}
-                        </div>
-                      );
-                    })}
-                </div>
-                <div className="movie-active-overview">
-                  {element.data.overview}
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-      }
-    });
-
     return (
       <>
-        {singleMovieMap}
-        <div id="empty-margin"></div>
+        {mediaListState.map((element, index) => {
+          if (element.type === "movie") {
+            return (
+              <Movie
+                key={index}
+                movieData={element}
+                index={index}
+                handleClick={handleClick}
+                toggleState={toggleState}
+                handleKey={handleKey}
+                dateString={dateString}
+                calculateRuntime={calculateRuntime}
+                creditsListState={creditsListState}
+              />
+            );
+          } else {
+            return null;
+          }
+        })}
+        <div id="empty-margin"></div>;
       </>
     );
   };
