@@ -30,7 +30,7 @@ const Show = ({ showData }) => {
           <div className="movie-poster">
             <img
               src={`https://image.tmdb.org/t/p/w342${
-                showData.data.seasons[showData.media.season - 1].poster_path
+                showData.data[`season/${showData.media.season}`].poster_path
               }`}
               alt={showData.data.original_name}
             />
@@ -43,7 +43,7 @@ const Show = ({ showData }) => {
             <span className="dot">•</span>
             <span className="date">
               {dateString(
-                showData.data.seasons[showData.media.season - 1].air_date
+                showData.data[`season/${showData.media.season}`].air_date
               )}
             </span>
           </div>
@@ -57,7 +57,7 @@ const Show = ({ showData }) => {
             })}
           </div>
           <div className={`movie-active-overview ${showData.media.type}`}>
-            {showData.data.seasons[showData.media.season - 1].overview}
+            {showData.data[`season/${showData.media.season}`].overview}
           </div>
           <div className="episodes-container">
             {showData.data[`season/${showData.media.season}`].episodes
