@@ -6,10 +6,10 @@
 }
 
 .genres-list div {
-  padding: 7px;
-  margin: 7px 0 7px 5px;
+  padding: 10px 0 10px 15px;
+  margin: 10px 0 10px 5px;
   color: white;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;

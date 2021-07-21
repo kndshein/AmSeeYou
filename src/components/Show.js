@@ -55,15 +55,36 @@ const Show = ({ showData }) => {
               );
             })}
           </div>
-          <div className="movie-active-overview">
+          {/* <div className="movie-active-overview">
             {showData.data.seasons[1].overview}
-          </div>
-          <div>
+          </div> */}
+          <div className="episodes-container">
             {showData.data[`season/${showData.media.season}`].episodes
-              .slice(showData.media.epiStart, showData.media.epiEnd)
+              .slice(showData.media.epiStart - 1, showData.media.epiEnd)
               .map((element, index) => {
                 console.log("element", element);
-                return <div key={index}>{element.name}</div>;
+                return (
+                  <div className="episode" key={index}>
+                    <div className="episode-still-container">
+                      <img
+                        className="episode-still"
+                        src={`https://image.tmdb.org/t/p/w342${element.still_path}`}
+                        alt={showData.data.original_name}
+                      />
+                    </div>
+                    <div className="episode-description-container">
+                      <div className="episode-name">
+                        <span className="episode-name-season">{`Season ${element.season_number}, Episode ${element.episode_number} - `}</span>
+                        <span className="episode-name-name">
+                          {element.name}
+                        </span>
+                      </div>
+                      <div className="episode-description">
+                        {element.overview}
+                      </div>
+                    </div>
+                  </div>
+                );
               })}
           </div>
         </div>

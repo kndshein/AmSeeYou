@@ -117,7 +117,7 @@
   transition: ease-in-out 0.3s;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   .single-movie.active {
     min-width: 90vw;
     transition: ease-in-out 0.3s;
@@ -156,7 +156,6 @@
   -ms-transform: skew(-45deg);
   transform: skew(-30deg);
   z-index: -1;
-  /* box-shadow: 10px 0 0 rgba(255, 255, 255, 0.3); */
   transition: color ease-in-out 0.3s;
 }
 
@@ -188,7 +187,7 @@
   transition: ease-in-out 0.3s;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .single-movie.active .movie-title {
     opacity: 0;
   }
@@ -233,10 +232,11 @@
 .movie-active-right {
   grid-area: 2 / 2 / 3 / 3;
   margin-left: 30px;
+  min-height: 60%;
   /* padding-right: 30px; */
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .movie-active-container {
     padding: 20px;
     overflow-x: hidden;
@@ -244,7 +244,7 @@
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
   .movie-active-container {
     display: flex;
     flex-flow: column;
@@ -359,8 +359,87 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
   .movie-active-overview {
-    margin: 15px 0 40px 0;
+    margin: 15px 0 50px 0;
+  }
+}
+
+/* show episodes */
+.episodes-container {
+  margin-top: 20px;
+  padding-right: 20px;
+  height: 80%;
+  overflow-y: auto;
+}
+
+.episode {
+  display: flex;
+  padding: 10px 10px 10px 15px;
+  margin: 20px 0 20px 0;
+  background-color: rgba(37, 37, 37, 0.5);
+  border-radius: 5px;
+}
+
+.episode:first-child {
+  margin: 0;
+}
+
+.episode-still-container {
+  position: relative;
+  flex-shrink: 0;
+  padding-top: 5px;
+  margin-right: 15px;
+  width: 150px;
+  overflow: hidden;
+}
+
+.episode-still {
+  padding-left: 5px;
+  object-fit: cover;
+  width: 100%;
+  border-left: 2px var(--liteAccent) solid;
+}
+
+.episode-description-container {
+  color: grey;
+}
+
+.episode-name {
+  position: relative;
+  font-weight: 700;
+}
+
+.episode-name-season {
+  color: var(--liteAccent);
+  font-weight: inherit;
+}
+
+.episode-name-name {
+  font-weight: inherit;
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .episodes-container {
+    padding: 0;
+  }
+
+  .episode {
+    flex-flow: column;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .episodes-container {
+    overflow: visible;
+  }
+
+  .movie-active-right {
+    min-height: 0;
+  }
+
+  .episode:last-child {
+    margin-bottom: 50px;
   }
 }
