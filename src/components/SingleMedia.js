@@ -24,7 +24,7 @@ const SingleMovie = ({ mediaListState }) => {
     return (
       <>
         {mediaListState.map((element, index) => {
-          if (element.type === "movie") {
+          if (element.media.type === "movie") {
             return (
               <Movie
                 key={index}

@@ -12,11 +12,12 @@ const MediaList = ({ mediaList }) => {
     const getAllMedia = () => {
       // generate a promise for each media data using async callback to map
       const arrayOfPromises = mediaList.map(async (media) => {
+        console.log("media", media);
         const response = await fetch(
           `https://api.themoviedb.org/3/${media.type}/${media.id}?api_key=${REACT_APP_APIKEY}&language=en-US&append_to_response=credits`
         );
         const data = await response.json();
-        return { type: "movie", data: data }; // each loop will return the data in the new array
+        return { media: media, data: data }; // each loop will return the data in the new array
       });
       //After map loop complete return the array of promises it generated
       return arrayOfPromises;
