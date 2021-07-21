@@ -1,19 +1,20 @@
 import React from "react";
 
-import SingleMovie from "../components/SingleMovie";
+import SingleMedia from "./SingleMedia";
 
-const MoviesList = (props) => {
-  const [moviesListState, setMoviesListState] = React.useState(null);
+const MediaList = (props) => {
+  const [mediaListState, setMediaListState] = React.useState(null);
   const [creditsListState, setCreditsListState] = React.useState(null);
 
   const { REACT_APP_APIKEY } = process.env;
 
   React.useEffect(() => {
-    const getAllMovies = () => {
-      // generate a promise for each movies data using async callback to map
-      const arrayOfPromises = props.moviesList.map(async (movie) => {
+    const getAllMedia = () => {
+      // generate a promise for each media data using async callback to map
+      const arrayOfPromises = props.mediaList.map(async (media) => {
+        console.log(media);
         const response = await fetch(
-          `https://api.themoviedb.org/3/${movie.type}/${movie.id}?api_key=${REACT_APP_APIKEY}&language=en-US`
+          `https://api.themoviedb.org/3/${media.type}/${media.id}?api_key=${REACT_APP_APIKEY}&language=en-US`
         );
         const data = await response.json();
         return data; // each loop will return the data in the new array
@@ -24,7 +25,7 @@ const MoviesList = (props) => {
 
     const getAllCredits = () => {
       // generate a promise for each movies data using async callback to map
-      const arrayOfPromises = props.moviesList.map(async (movie) => {
+      const arrayOfPromises = props.mediaList.map(async (movie) => {
         const response = await fetch(
           `https://api.themoviedb.org/3/${movie.type}/${movie.id}/credits?api_key=${REACT_APP_APIKEY}&language=en-US`
         );
@@ -36,22 +37,22 @@ const MoviesList = (props) => {
     };
 
     //Pass the array of promises to Promise.all to make sure they have all resolved
-    Promise.all(getAllMovies())
+    Promise.all(getAllMedia())
       // The returned values from promise.all can then be handled in the callback via .then that'll run when Promise.all complete
-      .then((arrayOfData) => setMoviesListState(arrayOfData));
+      .then((arrayOfData) => setMediaListState(arrayOfData));
 
     Promise.all(getAllCredits())
       // The returned values from promise.all can then be handled in the callback via .then that'll run when Promise.all complete
       .then((arrayOfData) => setCreditsListState(arrayOfData));
-  }, [REACT_APP_APIKEY, props.moviesList]);
+  }, [REACT_APP_APIKEY, props.mediaList]);
 
   return (
     <div className="movies-list">
-      <SingleMovie
-        moviesListState={moviesListState}
+      <SingleMedia
+        mediaListState={mediaListState}
         creditsListState={creditsListState}
       />
     </div>
   );
 };
-export default MoviesList;
+export default MediaList;

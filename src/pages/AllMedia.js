@@ -1,9 +1,9 @@
 import React from "react";
 
-import MoviesList from "../components/MoviesList";
+import MediaList from "../components/MediaList";
 
 const AllMovies = (props) => {
-  const moviesList = [
+  const mediaList = [
     { type: "movie", id: "1771-captain-america-the-first-avenger" },
     { type: "movie", id: "299537-captain-marvel" },
     { type: "movie", id: "1726-iron-man" },
@@ -32,7 +32,7 @@ const AllMovies = (props) => {
 
   return (
     <div className="all-movies">
-      <MoviesList moviesList={moviesList} />
+      <MediaList mediaList={mediaList} />
     </div>
   );
 };

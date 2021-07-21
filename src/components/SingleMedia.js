@@ -1,8 +1,8 @@
 import React from "react";
 import GenresList from "./GenresList";
 
-const SingleMovie = (props) => {
-  // console.log("singleMovie props", props.creditsListState);
+const SingleMovie = ({ mediaListState, creditsListState }) => {
+  // console.log("singleMovie props", props);
 
   const [toggleState, setToggleState] = React.useState(null);
 
@@ -77,7 +77,7 @@ const SingleMovie = (props) => {
   };
 
   const loaded = () => {
-    const singleMovieMap = props.moviesListState.map((element, index) => {
+    const singleMovieMap = mediaListState.map((element, index) => {
       return (
         <div
           className={`single-movie${
@@ -124,7 +124,7 @@ const SingleMovie = (props) => {
                 </span>
               </div>
               <div className="cast">
-                {props.creditsListState[index].cast
+                {creditsListState[index].cast
                   .slice(0, 5)
                   .map((actor, index) => {
                     return (
@@ -153,7 +153,7 @@ const SingleMovie = (props) => {
     return <></>;
   };
 
-  return props.moviesListState && props.creditsListState ? loaded() : loading();
+  return mediaListState && creditsListState ? loaded() : loading();
 };
 
 export default SingleMovie;
