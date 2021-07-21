@@ -4,7 +4,6 @@ import SingleMedia from "./SingleMedia";
 
 const MediaList = ({ mediaList }) => {
   const [mediaListState, setMediaListState] = React.useState(null);
-  // const [creditsListState, setCreditsListState] = React.useState(null);
 
   const { REACT_APP_APIKEY } = process.env;
 

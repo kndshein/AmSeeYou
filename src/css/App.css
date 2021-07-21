@@ -230,7 +230,9 @@
 }
 
 .movie-active-right {
-  grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  flex-flow: column;
+  /* grid-area: 2 / 2 / 3 / 3; */
   margin-left: 30px;
   min-height: 60%;
   /* padding-right: 30px; */
@@ -338,13 +340,12 @@
 .cast {
   display: flex;
   flex-flow: row wrap;
-  margin-top: 5px;
   color: var(--liteAccent);
 }
 
 .actor {
   padding: 5px 10px 5px 10px;
-  margin: 10px 10px 0 0;
+  margin: 20px 10px 0 0;
   font-size: max(1rem, 1vw);
   background-color: var(--main);
   border-radius: 5px;
@@ -352,7 +353,7 @@
 
 /* movie active overview */
 .movie-active-overview {
-  margin-top: 10px;
+  margin-top: 20px;
   color: grey;
   font-size: max(1.2rem, 1.2vw);
   line-height: max(1.5rem, 1.5vw);
@@ -363,13 +364,19 @@
   .movie-active-overview {
     margin: 15px 0 50px 0;
   }
+
+  .movie-active-overview.tv {
+    margin: 0;
+    margin-top: 20px;
+  }
 }
 
 /* show episodes */
 .episodes-container {
+  float: left;
   margin-top: 20px;
   padding-right: 20px;
-  height: 80%;
+  height: 100%;
   overflow-y: auto;
 }
 

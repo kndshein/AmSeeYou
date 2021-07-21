@@ -4,6 +4,7 @@ import GenresList from "./GenresList";
 import dateString from "../utilities/dateCalc";
 
 const Show = ({ showData }) => {
+  console.log("showData", showData);
   return (
     <>
       <div className="movie-backdrop">
@@ -13,7 +14,7 @@ const Show = ({ showData }) => {
         />
       </div>
       <div className="movie-title">
-        <h2>{showData.data.original_name}</h2>
+        <h2>{`${showData.data.original_name} Season ${showData.media.season}`}</h2>
       </div>
       <div className="movie-active-container">
         <div className="movie-active-top">
@@ -36,7 +37,7 @@ const Show = ({ showData }) => {
           </div>
           <GenresList genres={showData.data.genres} />
         </div>
-        <div className="movie-active-right">
+        <div className={`movie-active-right ${showData.media.type}`}>
           <div className="movie-active-subtitle">
             <span className="vote-average">{showData.data.vote_average}</span>
             <span className="dot">•</span>
@@ -55,14 +56,13 @@ const Show = ({ showData }) => {
               );
             })}
           </div>
-          {/* <div className="movie-active-overview">
-            {showData.data.seasons[1].overview}
-          </div> */}
+          <div className={`movie-active-overview ${showData.media.type}`}>
+            {showData.data.seasons[showData.media.season - 1].overview}
+          </div>
           <div className="episodes-container">
             {showData.data[`season/${showData.media.season}`].episodes
               .slice(showData.media.epiStart - 1, showData.media.epiEnd)
               .map((element, index) => {
-                console.log("element", element);
                 return (
                   <div className="episode" key={index}>
                     <div className="episode-still-container">
