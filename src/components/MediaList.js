@@ -14,7 +14,11 @@ const MediaList = ({ mediaList }) => {
       const arrayOfPromises = mediaList.map(async (media) => {
         console.log("media", media);
         const response = await fetch(
-          `https://api.themoviedb.org/3/${media.type}/${media.id}?api_key=${REACT_APP_APIKEY}&language=en-US&append_to_response=credits`
+          `https://api.themoviedb.org/3/${media.type}/${
+            media.id
+          }?api_key=${REACT_APP_APIKEY}&language=en-US&append_to_response=credits${
+            media.type === "tv" ? `,season/${media.season}` : ""
+          }`
         );
         const data = await response.json();
         return { media: media, data: data }; // each loop will return the data in the new array

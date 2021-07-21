@@ -1,6 +1,7 @@
 import React from "react";
 
 import Movie from "./Movie";
+import Show from "./Show";
 
 const SingleMovie = ({ mediaListState }) => {
   console.log("singleMovie props", mediaListState);
@@ -24,20 +25,23 @@ const SingleMovie = ({ mediaListState }) => {
     return (
       <>
         {mediaListState.map((element, index) => {
-          if (element.media.type === "movie") {
-            return (
-              <Movie
-                key={index}
-                movieData={element}
-                index={index}
-                handleClick={handleClick}
-                toggleState={toggleState}
-                handleKey={handleKey}
-              />
-            );
-          } else {
-            return null;
-          }
+          return (
+            <div
+              className={`single-movie${
+                toggleState?.active === index ? " active" : ""
+              }`}
+              onClick={() => handleClick(index)}
+              onKeyPress={(event) => handleKey(event, index)}
+              tabIndex="0"
+              key={index}
+            >
+              {element.media.type === "movie" ? (
+                <Movie key={index} movieData={element} />
+              ) : (
+                <Show key={index} showData={element} />
+              )}
+            </div>
+          );
         })}
         <div id="empty-margin"></div>;
       </>
