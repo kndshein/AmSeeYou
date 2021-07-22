@@ -418,6 +418,28 @@
   scrollbar-width: thin;
 }
 
+.episodes-container::-webkit-scrollbar {
+  cursor: pointer;
+  width: 10px;
+}
+
+.episodes-container::-webkit-scrollbar-track-piece {
+  background-color: var(--main);
+}
+
+.episodes-container::-webkit-scrollbar-track-piece:hover {
+  background-color: var(--liteMain);
+}
+
+.episodes-container::-webkit-scrollbar-thumb {
+  background-color: var(--liteAccent);
+  border-radius: 50px;
+}
+
+.episodes-container::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+
 .episode {
   display: flex;
   padding: 10px 10px 10px 15px;
