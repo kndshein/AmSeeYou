@@ -99,7 +99,9 @@ const Show = (props) => {
               })}
             </div>
             <div className={`movie-active-overview ${rawShowData.type}`}>
-              {showData[`season/${rawShowData.season}`].overview}
+              {showData[`season/${rawShowData.season}`].overview
+                ? showData[`season/${rawShowData.season}`].overview
+                : showData.overview}
             </div>
             <div className="episodes-container">
               {showData[`season/${rawShowData.season}`].episodes
@@ -110,7 +112,12 @@ const Show = (props) => {
                       <div className="episode-still-container">
                         <img
                           className="episode-still"
-                          src={`https://image.tmdb.org/t/p/w342${element.still_path}`}
+                          src={`https://image.tmdb.org/t/p/w342${
+                            element.still_path
+                              ? element.still_path
+                              : showData[`season/${rawShowData.season}`]
+                                  .poster_path
+                          }`}
                           alt={showData.original_name}
                         />
                       </div>

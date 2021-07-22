@@ -53,7 +53,11 @@ const Movie = (props) => {
         )}
         <div className="movie-backdrop">
           <img
-            src={`https://image.tmdb.org/t/p/w1280${movieData.backdrop_path}`}
+            src={`https://image.tmdb.org/t/p/w1280${
+              movieData.backdrop_path
+                ? movieData.backdrop_path
+                : movieData.poster_path
+            }`}
             alt={movieData.original_title}
             onLoad={() => setBackdropLoaded(true)}
           />

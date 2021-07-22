@@ -108,6 +108,7 @@
   -webkit-transform: rotateX(180deg); /* Safari and Chrome */
   -ms-transform: rotateX(180deg); /* IE 9+ */
   -o-transform: rotateX(180deg); /* Opera */
+  /* filter: grayscale(75%); */
 }
 
 #empty-margin {
@@ -120,6 +121,7 @@
 .single-movie:hover,
 .single-movie.active {
   box-shadow: 0 0 5px 1px var(--liteAccent), 0 0 15px var(--accent);
+  /* filter: grayscale(0%); */
 }
 
 .single-movie:focus {
@@ -166,7 +168,7 @@
   margin: 0;
   padding: 2px 7px 3px 15px;
   left: 0;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.3);
   white-space: nowrap;
   transform: rotate(-90deg);
   transform-origin: top left;
@@ -200,6 +202,7 @@
 .single-movie:hover .movie-title,
 .single-movie.active .movie-title {
   color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 5px var(--background);
   transition: ease-in-out 0.3s;
 }
 

@@ -184,13 +184,13 @@ const AllMovies = ({ moviesOnly }) => {
       epiStart: 7,
       epiEnd: 8,
     },
-    // {
-    //   type: "tv",
-    //   id: "69088-agents-of-s-h-i-e-l-d-slingshot",
-    //   season: 1,
-    //   epiStart: 1,
-    //   epiEnd: 6,
-    // },
+    {
+      type: "tv",
+      id: "69088-agents-of-s-h-i-e-l-d-slingshot",
+      season: 1,
+      epiStart: 1,
+      epiEnd: 6,
+    },
     {
       type: "tv",
       id: "1403-marvel-s-agents-of-s-h-i-e-l-d",
@@ -202,7 +202,7 @@ const AllMovies = ({ moviesOnly }) => {
     { type: "movie", id: "413279-team-thor" },
     { type: "movie", id: "441829-team-thor-part-2" },
     { type: "movie", id: "284053-thor-ragnarok" },
-    // { type: "movie", id: "505945-team-darryl" },
+    { type: "movie", id: "505945-team-darryl" },
     {
       type: "tv",
       id: "68716-marvel-s-inhumans",
