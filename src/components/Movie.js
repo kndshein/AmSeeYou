@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import dateString from "../utilities/dateCalc";
 import runtimeString from "../utilities/runtimeCalc";
@@ -6,7 +6,7 @@ import GenresList from "./GenresList";
 import Loading from "./Loading";
 
 const Movie = (props) => {
-  const { rawMovieData } = props;
+  const { rawMovieData, toggleState, handleClick, handleKey, index } = props;
   const [movieData, setMovieData] = useState();
   const [backdropLoaded, setBackdropLoaded] = useState(false);
   const { REACT_APP_APIKEY } = process.env;
@@ -107,7 +107,19 @@ const Movie = (props) => {
     );
   };
 
-  return movieData ? Loaded() : ComponentLoading();
+  return (
+    <div
+      className={`single-movie${
+        toggleState?.active === index ? " active" : ""
+      }`}
+      onClick={() => handleClick(index)}
+      onKeyPress={(event) => handleKey(event, index)}
+      tabIndex="0"
+      key={index}
+    >
+      {movieData ? Loaded() : ComponentLoading()}
+    </div>
+  );
 };
 
 export default Movie;

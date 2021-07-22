@@ -29,44 +29,24 @@ const SingleMedia = ({ moviesOnly, rawMediaList }) => {
         return (
           <>
             {element.type === "movie" ? (
-              <div
-                className={`single-movie${
-                  toggleState?.active === index ? " active" : ""
-                }`}
-                onClick={() => handleClick(index)}
-                onKeyPress={(event) => handleKey(event, index)}
-                tabIndex="0"
+              <Movie
                 key={index}
-              >
-                <Movie
+                rawMovieData={element}
+                toggleState={toggleState}
+                handleClick={handleClick}
+                handleKey={handleKey}
+                index={index}
+              />
+            ) : (
+              !moviesOnly && (
+                <Show
                   key={index}
-                  rawMovieData={element}
+                  rawShowData={element}
                   toggleState={toggleState}
                   handleClick={handleClick}
                   handleKey={handleKey}
                   index={index}
                 />
-              </div>
-            ) : (
-              !moviesOnly && (
-                <div
-                  className={`single-movie${
-                    toggleState?.active === index ? " active" : ""
-                  }`}
-                  onClick={() => handleClick(index)}
-                  onKeyPress={(event) => handleKey(event, index)}
-                  tabIndex="0"
-                  key={index}
-                >
-                  <Show
-                    key={index}
-                    rawShowData={element}
-                    toggleState={toggleState}
-                    handleClick={handleClick}
-                    handleKey={handleKey}
-                    index={index}
-                  />
-                </div>
               )
             )}
           </>

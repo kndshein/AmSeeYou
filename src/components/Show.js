@@ -5,7 +5,7 @@ import dateString from "../utilities/dateCalc";
 import Loading from "./Loading";
 
 const Show = (props) => {
-  const { rawShowData } = props;
+  const { rawShowData, toggleState, handleClick, handleKey, index } = props;
   const [showData, setShowData] = useState(null);
   const [backdropLoaded, setBackdropLoaded] = useState(false);
   const { REACT_APP_APIKEY } = process.env;
@@ -141,7 +141,19 @@ const Show = (props) => {
     );
   };
 
-  return showData ? Loaded() : ComponentLoading();
+  return (
+    <div
+      className={`single-movie${
+        toggleState?.active === index ? " active" : ""
+      }`}
+      onClick={() => handleClick(index)}
+      onKeyPress={(event) => handleKey(event, index)}
+      tabIndex="0"
+      key={index}
+    >
+      {showData ? Loaded() : ComponentLoading()}
+    </div>
+  );
 };
 
 export default Show;
