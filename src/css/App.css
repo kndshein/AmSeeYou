@@ -42,6 +42,119 @@
   color: white;
 }
 
+/* buttons */
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 7px;
+  color: var(--liteMain);
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+}
+
+button:hover {
+  color: white;
+  /* box-shadow: 0 0 5px white; */
+}
+
+button.active {
+  color: white;
+  text-shadow: 0 0 10px var(--liteAccent);
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--liteAccent);
+  }
+  to {
+    text-shadow: none;
+  }
+}
+
+/***************/
+/* ABOUT CARD*/
+/***************/
+.about-card {
+  z-index: 12;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.close-button {
+  position: absolute;
+  right: 2%;
+  top: 3%;
+  cursor: pointer;
+}
+
+.close-button svg {
+  fill: white;
+  width: 50px;
+  height: 50px;
+}
+
+.about-text {
+  position: relative;
+  padding: 50px;
+  max-width: 75%;
+  color: grey;
+  background-color: var(--main);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.about-title {
+  position: relative;
+  margin: 0;
+  padding-left: 20px;
+  color: white;
+}
+
+.about-title::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 5px;
+  height: 75%;
+  background-color: var(--liteAccent);
+}
+
+.about-body span {
+  color: white;
+  font-style: italic;
+}
+
+.about-body a {
+  color: var(--liteAccent);
+}
+
+.about-body a:hover {
+  color: white;
+}
+
+/* table */
+table {
+  font-size: 1rem;
+  border-collapse: collapse;
+}
+
+td {
+  padding-right: 2rem;
+}
+
 /***************/
 /* MOVIE LIST LAYOUT */
 /***************/
@@ -410,6 +523,10 @@
   }
 }
 
+/***************/
+/* SHOW */
+/***************/
+
 /* show episodes */
 .episodes-container {
   float: left;
@@ -514,6 +631,7 @@
   }
 }
 
+/* loading icons */
 .loading {
   z-index: 500;
   display: flex;

@@ -48,7 +48,7 @@ const SingleMedia = ({ moviesOnly, rawMediaList }) => {
                 />
               </div>
             ) : (
-              moviesOnly && (
+              !moviesOnly && (
                 <div
                   className={`single-movie${
                     toggleState?.active === index ? " active" : ""

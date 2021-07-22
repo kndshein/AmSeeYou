@@ -1,12 +1,10 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-const Nav = ({ moviesOnly, setMoviesOnly }) => {
+const Nav = ({ moviesOnly, setMoviesOnly, setAboutOpen }) => {
   return (
     <div className="nav-bar">
-      {/* <Link to="/" className="nav-list">
-        Movies List
-      </Link> */}
+      <button onClick={() => setAboutOpen(true)}>About</button>
       <div className="img-container">
         <img
           src="https://media.giphy.com/media/XmppNRlrlu2SA/giphy.gif"
@@ -14,11 +12,12 @@ const Nav = ({ moviesOnly, setMoviesOnly }) => {
         />
       </div>
       <button
+        className={moviesOnly ? "active" : ""}
         onClick={() => {
           moviesOnly ? setMoviesOnly(false) : setMoviesOnly(true);
         }}
       >
-        Haha
+        Movies Only
       </button>
     </div>
   );

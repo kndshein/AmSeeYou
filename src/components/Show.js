@@ -10,25 +10,24 @@ const Show = (props) => {
   const [backdropLoaded, setBackdropLoaded] = useState(false);
   const { REACT_APP_APIKEY } = process.env;
 
-  const getMedia = async () => {
-    try {
-      const response = await fetch(
-        `https://api.themoviedb.org/3/${rawShowData.type}/${
-          rawShowData.id
-        }?api_key=${REACT_APP_APIKEY}&language=en-US&append_to_response=credits${
-          rawShowData.type === "tv" ? `,season/${rawShowData.season}` : ""
-        }`
-      );
-      const data = await response.json();
-      setShowData(data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   useEffect(() => {
+    const getMedia = async () => {
+      try {
+        const response = await fetch(
+          `https://api.themoviedb.org/3/${rawShowData.type}/${
+            rawShowData.id
+          }?api_key=${REACT_APP_APIKEY}&language=en-US&append_to_response=credits${
+            rawShowData.type === "tv" ? `,season/${rawShowData.season}` : ""
+          }`
+        );
+        const data = await response.json();
+        setShowData(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
     getMedia();
-  }, []);
+  }, [rawShowData, REACT_APP_APIKEY]);
 
   const ComponentLoading = () => {
     return (
