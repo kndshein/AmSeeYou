@@ -1,5 +1,4 @@
 import React from "react";
-
 import GenresList from "./GenresList";
 import dateString from "../utilities/dateCalc";
 
