@@ -33,7 +33,11 @@ const MediaList = ({ mediaList, moviesOnly }) => {
 
   return (
     <div className="movies-list">
-      <SingleMedia mediaListState={mediaListState} moviesOnly={moviesOnly} />
+      <SingleMedia
+        mediaListState={mediaListState}
+        moviesOnly={moviesOnly}
+        mediaList={mediaList}
+      />
     </div>
   );
 };

@@ -6,8 +6,9 @@
 }
 
 .genres-list div {
-  padding: 10px 0 10px 15px;
-  margin: 10px 0 10px 5px;
+  position: relative;
+  padding: 10px 0 10px 20px;
+  margin: 10px 0 10px 0;
   color: white;
   font-size: 1rem;
   font-weight: 700;
@@ -17,30 +18,124 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.genre-action {
-  box-shadow: -5px 0 0 0 rgb(255, 85, 85);
-}
-.genre-adventure {
-  box-shadow: -5px 0 0 0 rgb(158, 84, 255);
-}
-.genre-comedy {
-  box-shadow: -5px 0 0 0 rgb(255, 223, 82);
-}
-.genre-drama {
-  box-shadow: -5px 0 0 0 rgb(255, 136, 57);
-}
-.genre-fantasy {
-  box-shadow: -5px 0 0 0 rgb(96, 255, 81);
-}
-.genre-science-fiction {
-  box-shadow: -5px 0 0 0 rgb(69, 196, 255);
-}
-.genre-thriller {
-  box-shadow: -5px 0 0 0 rgb(229, 124, 255);
+.genre-aa::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(229, 124, 255);
+  background-image: linear-gradient(rgb(255, 85, 85), rgb(158, 84, 255));
 }
 
-/* @media only screen and (max-width: 1024px) {
-  .genres-list div {
-    font-size: 1rem;
-  }
-} */
+.genre-action::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(255, 85, 85);
+}
+
+.genre-adventure::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(158, 84, 255);
+}
+
+.genre-comedy::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(255, 223, 82);
+}
+
+.genre-crime::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(255, 124, 179);
+}
+
+.genre-drama::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(255, 136, 57);
+}
+
+.genre-fantasy::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(96, 255, 81);
+}
+
+.genre-mystery::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(163, 0, 0);
+}
+
+.genre-science-fiction::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(69, 196, 255);
+}
+
+.genre-sf::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(229, 124, 255);
+  background-image: linear-gradient(rgb(69, 196, 255), rgb(96, 255, 81));
+}
+
+.genre-thriller::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(229, 124, 255);
+}
+
+.genre-wp::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgb(109, 109, 109);
+}

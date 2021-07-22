@@ -3,21 +3,16 @@ import React from "react";
 import GenresList from "./GenresList";
 import dateString from "../utilities/dateCalc";
 
-const Show = ({ showData, toggleState, handleClick, handleKey, index }) => {
+const Show = (props) => {
+  const { showData, backdropLoaded } = props;
+
   return (
-    <div
-      className={`single-movie${
-        toggleState?.active === index ? " active" : ""
-      }`}
-      onClick={() => handleClick(index)}
-      onKeyPress={(event) => handleKey(event, index)}
-      tabIndex="0"
-      key={index}
-    >
+    <>
       <div className="movie-backdrop">
         <img
-          src={`https://image.tmdb.org/t/p/original${showData.data.backdrop_path}`}
+          src={`https://image.tmdb.org/t/p/w1280${showData.data.backdrop_path}`}
           alt={showData.data.original_name}
+          onLoad={backdropLoaded}
         />
       </div>
       <div className="movie-title">
@@ -72,13 +67,13 @@ const Show = ({ showData, toggleState, handleClick, handleKey, index }) => {
               .map((element, index) => {
                 return (
                   <div className="episode" key={index}>
-                    <div className="episode-still-container">
+                    {/* <div className="episode-still-container">
                       <img
                         className="episode-still"
                         src={`https://image.tmdb.org/t/p/w342${element.still_path}`}
                         alt={showData.data.original_name}
                       />
-                    </div>
+                    </div> */}
                     <div className="episode-description-container">
                       <div className="episode-name">
                         <span className="episode-name-season">{`Season ${element.season_number}, Episode ${element.episode_number} - `}</span>
@@ -96,7 +91,7 @@ const Show = ({ showData, toggleState, handleClick, handleKey, index }) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

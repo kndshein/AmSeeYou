@@ -35,6 +35,21 @@ const GenresList = ({ genres }) => {
       case 53:
         className = "genre-thriller";
         break;
+      case 10759:
+        className = "genre-aa";
+        break;
+      case 10765:
+        className = "genre-sf";
+        break;
+      case 80:
+        className = "genre-crime";
+        break;
+      case 10768:
+        className = "genre-wp";
+        break;
+      case 9648:
+        className = "genre-mystery";
+        break;
       default:
         className = "genre-none";
     }

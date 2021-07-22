@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 import Movie from "./Movie";
 import Show from "./Show";
 
-const SingleMedia = ({ mediaListState, moviesOnly }) => {
-  const [toggleState, setToggleState] = React.useState(null);
+const SingleMedia = ({ mediaListState, moviesOnly, mediaList }) => {
+  console.log(mediaListState);
+  const [toggleState, setToggleState] = useState(null);
+  const counter = useRef(0);
+  const [roading, setRoading] = useState(true);
+
+  const backdropLoaded = () => {
+    counter.current += 1;
+    if (counter.current >= mediaList.length) {
+      setRoading(false);
+    }
+  };
 
   const handleClick = (index) => {
     setToggleState({ active: index });
@@ -19,42 +29,7 @@ const SingleMedia = ({ mediaListState, moviesOnly }) => {
     }
   };
 
-  const loaded = () => {
-    return (
-      <>
-        {mediaListState.map((element, index) => {
-          return (
-            <>
-              {element.media.type === "movie" ? (
-                <Movie
-                  key={index}
-                  movieData={element}
-                  toggleState={toggleState}
-                  handleClick={handleClick}
-                  handleKey={handleKey}
-                  index={index}
-                />
-              ) : (
-                moviesOnly && (
-                  <Show
-                    key={index}
-                    showData={element}
-                    toggleState={toggleState}
-                    handleClick={handleClick}
-                    handleKey={handleKey}
-                    index={index}
-                  />
-                )
-              )}
-            </>
-          );
-        })}
-        <div id="empty-margin"></div>;
-      </>
-    );
-  };
-
-  const loading = () => {
+  const Loading = () => {
     return (
       <>
         <svg
@@ -228,7 +203,53 @@ const SingleMedia = ({ mediaListState, moviesOnly }) => {
     );
   };
 
-  return mediaListState ? loaded() : loading();
+  return (
+    <>
+      {roading && (
+        <div className="loading">
+          <Loading />
+        </div>
+      )}
+      {mediaListState?.map((element, index) => {
+        return (
+          <div
+            className={`single-movie${
+              toggleState?.active === index ? " active" : ""
+            }`}
+            onClick={() => handleClick(index)}
+            onKeyPress={(event) => handleKey(event, index)}
+            tabIndex="0"
+            key={index}
+          >
+            {element.media.type === "movie" ? (
+              <Movie
+                key={index}
+                movieData={element}
+                toggleState={toggleState}
+                handleClick={handleClick}
+                handleKey={handleKey}
+                index={index}
+                backdropLoaded={backdropLoaded}
+              />
+            ) : (
+              moviesOnly && (
+                <Show
+                  key={index}
+                  showData={element}
+                  toggleState={toggleState}
+                  handleClick={handleClick}
+                  handleKey={handleKey}
+                  index={index}
+                  backdropLoaded={backdropLoaded}
+                />
+              )
+            )}
+          </div>
+        );
+      })}
+      <div id="empty-margin"></div>;
+    </>
+  );
 };
 
 export default SingleMedia;

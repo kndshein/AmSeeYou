@@ -4,21 +4,16 @@ import dateString from "../utilities/dateCalc";
 import runtimeString from "../utilities/runtimeCalc";
 import GenresList from "./GenresList";
 
-const Movie = ({ movieData, toggleState, handleClick, handleKey, index }) => {
+const Movie = (props) => {
+  const { movieData, backdropLoaded } = props;
+
   return (
-    <div
-      className={`single-movie${
-        toggleState?.active === index ? " active" : ""
-      }`}
-      onClick={() => handleClick(index)}
-      onKeyPress={(event) => handleKey(event, index)}
-      tabIndex="0"
-      key={index}
-    >
+    <>
       <div className="movie-backdrop">
         <img
-          src={`https://image.tmdb.org/t/p/original${movieData.data.backdrop_path}`}
+          src={`https://image.tmdb.org/t/p/w1280${movieData.data.backdrop_path}`}
           alt={movieData.data.original_title}
+          onLoad={backdropLoaded}
         />
       </div>
       <div className="movie-title">
@@ -64,7 +59,7 @@ const Movie = ({ movieData, toggleState, handleClick, handleKey, index }) => {
           <div className="movie-active-overview">{movieData.data.overview}</div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
