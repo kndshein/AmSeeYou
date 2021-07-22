@@ -4,7 +4,7 @@ import AllMedia from "./pages/AllMedia";
 import Nav from "./components/Nav";
 
 function App() {
-  const [moviesOnly, setMoviesOnly] = React.useState(true);
+  const [moviesOnly, setMoviesOnly] = React.useState(false);
 
   return (
     <div className="App">

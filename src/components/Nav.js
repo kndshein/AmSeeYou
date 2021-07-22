@@ -13,13 +13,13 @@ const Nav = ({ moviesOnly, setMoviesOnly }) => {
           alt="futuristic blob looking thang"
         />
       </div>
-      {/* <button
+      <button
         onClick={() => {
           moviesOnly ? setMoviesOnly(false) : setMoviesOnly(true);
         }}
       >
         Haha
-      </button> */}
+      </button>
     </div>
   );
 };

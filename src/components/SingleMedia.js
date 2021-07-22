@@ -19,39 +19,57 @@ const SingleMedia = ({ moviesOnly, rawMediaList }) => {
     }
   };
 
+  if (moviesOnly) {
+    rawMediaList.filter((type) => type.type !== "tv");
+  }
+
   return (
     <>
       {rawMediaList.map((element, index) => {
         return (
-          <div
-            className={`single-movie${
-              toggleState?.active === index ? " active" : ""
-            }`}
-            onClick={() => handleClick(index)}
-            onKeyPress={(event) => handleKey(event, index)}
-            tabIndex="0"
-            key={index}
-          >
+          <>
             {element.type === "movie" ? (
-              <Movie
+              <div
+                className={`single-movie${
+                  toggleState?.active === index ? " active" : ""
+                }`}
+                onClick={() => handleClick(index)}
+                onKeyPress={(event) => handleKey(event, index)}
+                tabIndex="0"
                 key={index}
-                rawMovieData={element}
-                toggleState={toggleState}
-                handleClick={handleClick}
-                handleKey={handleKey}
-                index={index}
-              />
+              >
+                <Movie
+                  key={index}
+                  rawMovieData={element}
+                  toggleState={toggleState}
+                  handleClick={handleClick}
+                  handleKey={handleKey}
+                  index={index}
+                />
+              </div>
             ) : (
-              <Show
-                key={index}
-                rawShowData={element}
-                toggleState={toggleState}
-                handleClick={handleClick}
-                handleKey={handleKey}
-                index={index}
-              />
+              moviesOnly && (
+                <div
+                  className={`single-movie${
+                    toggleState?.active === index ? " active" : ""
+                  }`}
+                  onClick={() => handleClick(index)}
+                  onKeyPress={(event) => handleKey(event, index)}
+                  tabIndex="0"
+                  key={index}
+                >
+                  <Show
+                    key={index}
+                    rawShowData={element}
+                    toggleState={toggleState}
+                    handleClick={handleClick}
+                    handleKey={handleKey}
+                    index={index}
+                  />
+                </div>
+              )
             )}
-          </div>
+          </>
         );
       })}
       <div id="empty-margin"></div>;
