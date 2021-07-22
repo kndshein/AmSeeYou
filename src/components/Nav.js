@@ -4,7 +4,7 @@ import React from "react";
 const Nav = ({ moviesOnly, setMoviesOnly, setAboutOpen }) => {
   return (
     <div className="nav-bar">
-      <button onClick={() => setAboutOpen(true)}>About</button>
+      <button onClick={() => setAboutOpen(true)}>About Site</button>
       <div className="img-container">
         <img
           src="https://media.giphy.com/media/XmppNRlrlu2SA/giphy.gif"

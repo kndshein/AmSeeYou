@@ -35,6 +35,11 @@ const About = ({ setAboutOpen }) => {
             I will continue to maintain the site as long as it still brings me
             joy. Here's to small joys in life!
           </p>
+          <p>
+            Warmly,
+            <br /> Kaung <br />
+            <a href="https://knds.art">knds.art</a>
+          </p>
         </div>
         <table>
           <tbody>
@@ -84,7 +89,7 @@ const About = ({ setAboutOpen }) => {
             <tr>
               <td>2.1.2</td>
               <td>Jul 2021</td>
-              <td>Added "Movies Only" filter.</td>
+              <td>Added "Movies Only" filter and About card.</td>
             </tr>
           </tbody>
         </table>
