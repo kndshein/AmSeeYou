@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-const Nav = (props) => {
+const Nav = ({ moviesOnly, setMoviesOnly }) => {
   return (
     <div className="nav-bar">
       {/* <Link to="/" className="nav-list">
@@ -13,9 +13,13 @@ const Nav = (props) => {
           alt="futuristic blob looking thang"
         />
       </div>
-      {/* <Link to="/watched" className="nav-list">
-        Watched List
-      </Link> */}
+      {/* <button
+        onClick={() => {
+          moviesOnly ? setMoviesOnly(false) : setMoviesOnly(true);
+        }}
+      >
+        Haha
+      </button> */}
     </div>
   );
 };

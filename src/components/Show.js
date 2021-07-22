@@ -3,10 +3,17 @@ import React from "react";
 import GenresList from "./GenresList";
 import dateString from "../utilities/dateCalc";
 
-const Show = ({ showData }) => {
-  console.log("showData", showData);
+const Show = ({ showData, toggleState, handleClick, handleKey, index }) => {
   return (
-    <>
+    <div
+      className={`single-movie${
+        toggleState?.active === index ? " active" : ""
+      }`}
+      onClick={() => handleClick(index)}
+      onKeyPress={(event) => handleKey(event, index)}
+      tabIndex="0"
+      key={index}
+    >
       <div className="movie-backdrop">
         <img
           src={`https://image.tmdb.org/t/p/original${showData.data.backdrop_path}`}
@@ -89,7 +96,7 @@ const Show = ({ showData }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

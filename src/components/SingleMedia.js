@@ -3,7 +3,7 @@ import React from "react";
 import Movie from "./Movie";
 import Show from "./Show";
 
-const SingleMovie = ({ mediaListState }) => {
+const SingleMedia = ({ mediaListState, moviesOnly }) => {
   const [toggleState, setToggleState] = React.useState(null);
 
   const handleClick = (index) => {
@@ -24,21 +24,29 @@ const SingleMovie = ({ mediaListState }) => {
       <>
         {mediaListState.map((element, index) => {
           return (
-            <div
-              className={`single-movie${
-                toggleState?.active === index ? " active" : ""
-              }`}
-              onClick={() => handleClick(index)}
-              onKeyPress={(event) => handleKey(event, index)}
-              tabIndex="0"
-              key={index}
-            >
+            <>
               {element.media.type === "movie" ? (
-                <Movie key={index} movieData={element} />
+                <Movie
+                  key={index}
+                  movieData={element}
+                  toggleState={toggleState}
+                  handleClick={handleClick}
+                  handleKey={handleKey}
+                  index={index}
+                />
               ) : (
-                <Show key={index} showData={element} />
+                moviesOnly && (
+                  <Show
+                    key={index}
+                    showData={element}
+                    toggleState={toggleState}
+                    handleClick={handleClick}
+                    handleKey={handleKey}
+                    index={index}
+                  />
+                )
               )}
-            </div>
+            </>
           );
         })}
         <div id="empty-margin"></div>;
@@ -223,4 +231,4 @@ const SingleMovie = ({ mediaListState }) => {
   return mediaListState ? loaded() : loading();
 };
 
-export default SingleMovie;
+export default SingleMedia;

@@ -2,7 +2,7 @@ import React from "react";
 
 import MediaList from "../components/MediaList";
 
-const AllMovies = (props) => {
+const AllMovies = ({ moviesOnly }) => {
   const mediaList = [
     { type: "movie", id: "1771-captain-america-the-first-avenger" },
     {
@@ -358,7 +358,7 @@ const AllMovies = (props) => {
 
   return (
     <div className="all-movies">
-      <MediaList mediaList={mediaList} />
+      <MediaList mediaList={mediaList} moviesOnly={moviesOnly} />
     </div>
   );
 };

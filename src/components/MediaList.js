@@ -2,7 +2,7 @@ import React from "react";
 
 import SingleMedia from "./SingleMedia";
 
-const MediaList = ({ mediaList }) => {
+const MediaList = ({ mediaList, moviesOnly }) => {
   const [mediaListState, setMediaListState] = React.useState(null);
 
   const { REACT_APP_APIKEY } = process.env;
@@ -33,7 +33,7 @@ const MediaList = ({ mediaList }) => {
 
   return (
     <div className="movies-list">
-      <SingleMedia mediaListState={mediaListState} />
+      <SingleMedia mediaListState={mediaListState} moviesOnly={moviesOnly} />
     </div>
   );
 };
