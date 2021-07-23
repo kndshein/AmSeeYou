@@ -134,13 +134,13 @@ button.active {
   background-color: var(--liteAccent);
 }
 
-.about-body a {
+.about-text a {
   text-decoration: none;
   font-style: italic;
   color: var(--liteAccent);
 }
 
-.about-body a:hover {
+.about-text a:hover {
   color: white;
 }
 

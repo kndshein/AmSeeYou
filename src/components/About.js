@@ -18,7 +18,11 @@ const About = ({ setAboutOpen }) => {
             <span>AmSeeYou</span> showcases and cherishes the Marvel Cinematic
             Universe (MCU) films and TV shows. This website presents the entire
             universe in in-universe chronological order from{" "}
-            <a href="https://www.digitalspy.com/movies/a825774/marvel-cinematic-universe-in-chronological-order/">
+            <a
+              href="https://www.digitalspy.com/movies/a825774/marvel-cinematic-universe-in-chronological-order/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Digital Spy
             </a>
             .
@@ -38,7 +42,13 @@ const About = ({ setAboutOpen }) => {
           <p>
             Warmly,
             <br /> Kaung <br />
-            <a href="https://knds.art">knds.art</a>
+            <a
+              href="https://knds.art"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              knds.art
+            </a>
           </p>
         </div>
         <table>
@@ -93,6 +103,33 @@ const About = ({ setAboutOpen }) => {
             </tr>
           </tbody>
         </table>
+        <p>
+          Special shoutout to{" "}
+          <a
+            href="https://www.themoviedb.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TMDB
+          </a>{" "}
+          for the API, and{" "}
+          <a
+            href="https://30000fps.com/#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            30000fps
+          </a>{" "}
+          for the{" "}
+          <a
+            href="https://giphy.com/gifs/loop-sci-fi-XmppNRlrlu2SA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Sci-fi GIF
+          </a>
+          .
+        </p>
       </div>
     </div>
   );
