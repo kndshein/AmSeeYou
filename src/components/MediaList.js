@@ -2,10 +2,15 @@ import React from "react";
 
 import SingleMedia from "./SingleMedia";
 
-const MediaList = ({ rawMediaList, moviesOnly }) => {
+const MediaList = (props) => {
+  const { rawMediaList, moviesOnly, mediaListRef } = props;
   return (
-    <div className="movies-list">
-      <SingleMedia moviesOnly={moviesOnly} rawMediaList={rawMediaList} />
+    <div className="movies-list" ref={mediaListRef}>
+      <SingleMedia
+        moviesOnly={moviesOnly}
+        rawMediaList={rawMediaList}
+        mediaListRef={mediaListRef}
+      />
     </div>
   );
 };

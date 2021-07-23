@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 import MediaList from "../components/MediaList";
 
@@ -356,9 +357,29 @@ const AllMovies = ({ moviesOnly }) => {
     { type: "movie", id: "429617-spider-man-far-from-home" },
   ];
 
+  const mediaListRef = useRef(null);
+  const handleLeft = () => {
+    mediaListRef.current.scrollLeft -= 800;
+  };
+
+  const handleRight = () => {
+    mediaListRef.current.scrollLeft += 800;
+  };
+
   return (
     <div className="all-movies">
-      <MediaList rawMediaList={rawMediaList} moviesOnly={moviesOnly} />
+      <div className="arrow-left" onClick={() => handleLeft()}>
+        <MdKeyboardArrowLeft />
+      </div>
+
+      <MediaList
+        rawMediaList={rawMediaList}
+        moviesOnly={moviesOnly}
+        mediaListRef={mediaListRef}
+      />
+      <div className="arrow-right" onClick={() => handleRight()}>
+        <MdKeyboardArrowRight />
+      </div>
     </div>
   );
 };

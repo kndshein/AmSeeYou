@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Movie from "./Movie";
 import Show from "./Show";
 
-const SingleMedia = ({ moviesOnly, rawMediaList }) => {
+const SingleMedia = ({ moviesOnly, rawMediaList, mediaListRef }) => {
   const [toggleState, setToggleState] = useState(null);
 
   const handleClick = (index) => {
@@ -36,6 +36,7 @@ const SingleMedia = ({ moviesOnly, rawMediaList }) => {
                 handleClick={handleClick}
                 handleKey={handleKey}
                 index={index}
+                mediaListRef={mediaListRef}
               />
             ) : (
               !moviesOnly && (
