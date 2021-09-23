@@ -37,7 +37,7 @@ const About = ({ setAboutOpen }) => {
           </p>
           <p>
             I will continue to maintain the site as long as it still brings me
-            joy. Here's to small joys in life!
+            joy. Here's to small things in life!
           </p>
           <p>
             Warmly,
@@ -56,7 +56,9 @@ const About = ({ setAboutOpen }) => {
             <tr>
               <td>1.0.1</td>
               <td>Jan 2021</td>
-              <td>AmSeeYou was born.</td>
+              <td>
+                <i>AmSeeYou</i> was born.
+              </td>
             </tr>
             <tr>
               <td>1.0.2</td>
@@ -76,7 +78,9 @@ const About = ({ setAboutOpen }) => {
             <tr>
               <td>1.1.0</td>
               <td>Jul 2021</td>
-              <td>Added Black Widow. Added casts. Increased accessibilty.</td>
+              <td>
+                Added <i>Black Widow</i>. Added casts. Increased accessibilty.
+              </td>
             </tr>
             <tr>
               <td>2.0.0</td>
@@ -100,6 +104,14 @@ const About = ({ setAboutOpen }) => {
               <td>2.1.2</td>
               <td>Jul 2021</td>
               <td>Added "Movies Only" filter and About card.</td>
+            </tr>
+            <tr>
+              <td>2.1.3</td>
+              <td>Sep 2021</td>
+              <td>
+                Added <i>Shang-Chi and the Legend of Ten Rings</i>. Refactored
+                media json.
+              </td>
             </tr>
           </tbody>
         </table>
