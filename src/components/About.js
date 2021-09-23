@@ -93,7 +93,7 @@ const About = ({ setAboutOpen }) => {
               <td>Refactored API calls.</td>
             </tr>
             <tr>
-              <td>2.1.1</td>
+              <td>2.2.0</td>
               <td>Jul 2021</td>
               <td>
                 Added loading spinners. Removed horizontal scroll. Added
@@ -101,12 +101,12 @@ const About = ({ setAboutOpen }) => {
               </td>
             </tr>
             <tr>
-              <td>2.1.2</td>
+              <td>2.3.0</td>
               <td>Jul 2021</td>
               <td>Added "Movies Only" filter and About card.</td>
             </tr>
             <tr>
-              <td>2.1.3</td>
+              <td>2.3.1</td>
               <td>Sep 2021</td>
               <td>
                 Added <i>Shang-Chi and the Legend of Ten Rings</i>. Refactored
