@@ -3,7 +3,7 @@
 ## Project Links
 
 - [Github Repo Link](https://github.com/kndshein/ProjectTwo)
-- [Deployment Link](https://amseeyou.netlify.app)
+- [Deployed Link](https://amseeyou.netlify.app)
 
 ## Project Description
 
