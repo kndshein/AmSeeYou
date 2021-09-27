@@ -1,4 +1,4 @@
-<img src="./Images/AmSeeYou.jpg" alt="drawing" width="500"/>
+<img src="./Images/AmSeeYou.jpg" alt="AmSeeYou Title Card" width="500"/>
 
 ### Project Links
 - [Github Repo Link](https://github.com/kndshein/ProjectTwo)
