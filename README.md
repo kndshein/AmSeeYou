@@ -1,16 +1,18 @@
 <img src="./Images/AmSeeYou.jpg" alt="drawing" width="500"/>
 
-## Project Links
-
+### Project Links
 - [Github Repo Link](https://github.com/kndshein/ProjectTwo)
 - [Deployed Link](https://amseeyou.netlify.app)
 
-## Project Description
-
+### Project Description
 A website that lists the chronological order of the Marvel Cinematic Universe films and TV shows.
 
-## API
+### Technologies and APIs
+- React
+- TMDB (The Movie Database)
 
+
+### API
 <details>
 <summary>Sample API element</summary>
 
