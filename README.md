@@ -1,6 +1,4 @@
-<img src="https://i.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.webp" width=100/>
-
-# Project Overview
+<img src="./Images/AmSeeYou.jpg" alt="drawing" width="500"/>
 
 ## Project Links
 
@@ -9,7 +7,7 @@
 
 ## Project Description
 
-A website that lists the chronological order of the Marvel Cinematic Universe.
+A website that lists the chronological order of the Marvel Cinematic Universe films and TV shows.
 
 ## API
 
@@ -110,56 +108,3 @@ A website that lists the chronological order of the Marvel Cinematic Universe.
 ```
 
 </details>
-
-## Wireframes
-
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
-
-- [Wireframe](https://www.figma.com/file/lKAuxw68qqgsy6NxgvIAEa/Am-See-You)
-- [React Achitecture](https://docs.google.com/drawings/d/1uBYvkX6U5aEzU8OGx2h4QJoasdffDffz4WDwXbvyJf0/edit)
-
-### MVP/PostMVP
-
-#### MVP
-
-- Use a movie database api
-- Render data on page
-- Allow user to interact with the page
-- List all MCU films in chronological order
-- Watched list
-
-#### PostMVP
-
-- Include TV shows in the list
-- Change splash image on hover
-
-## Time Frame
-
-#### MVP
-
-| Component                         | Priority | Estimated Time | Actual Time |
-| --------------------------------- | :------: | :------------: | :---------: |
-| React: Setup Components           |    H     |      1 hr      |    5 hrs    |
-| React: API + Mapping              |    H     |     3 hrs      |    3 hrs    |
-| React: HandleClick + Watched List |    H     |     5 hrs      |    2 hrs    |
-| Deploy on Netlify                 |    H     |     0.5 hr     |    1 hrs    |
-| Prep for Styling                  |    M     |     2 hrs      |    5 hrs    |
-| CSS for Movie list                |    M     |     1 hrs      |   15 hrs    |
-| CSS for Watched List              |    M     |     1 hrs      |   1.5 hrs   |
-| CSS for Pages                     |    L     |     4 hrs      |   N/A hrs   |
-| Total                             |    H     |    17.5 hrs    |  32.5 hrs   |
-
-#### Post-MVP
-
-| Component                              | Priority | Estimated Time | Actual Time |
-| -------------------------------------- | :------: | :------------: | :---------: |
-| React: Click to show description       |    H     |     2 hrs      |    4 hrs    |
-| CSS for splash screen                  |    L     |     4 hrs      |   N/A hrs   |
-| CSS tabs for Movie List & Watched List |    L     |     3 hrs      |   N/A hrs   |
-| Total                                  |    H     |     9 hrs      |    4 hrs    |
-
-## Additional Libraries
-
-- React-router-dom
-
-https://www.npmjs.com/package/react-scroll-horizontal
