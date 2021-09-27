@@ -107,7 +107,7 @@ button.active {
 .about-text {
   position: relative;
   padding: 50px;
-  max-width: 75%;
+  max-width: 70%;
   max-height: 80vh;
   overflow: auto;
   color: grey;

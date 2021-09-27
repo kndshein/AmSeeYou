@@ -32,8 +32,8 @@ const About = ({ setAboutOpen }) => {
             after having learned what React was just a week prior. During the
             project, I fell in love with the process of bringing json objects to
             life -- it's satisfyingly beautiful. Even though the project is long
-            over, I have been adding new features (such as including TV shows in
-            the timeline) and building on existing code ever since.
+            over, I have been adding new features and building on existing code
+            ever since.
           </p>
           <p>
             I will continue to maintain the site as long as it still brings me
