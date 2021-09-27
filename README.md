@@ -11,10 +11,13 @@ A website that lists the chronological order of the Marvel Cinematic Universe fi
 - React
 - TMDB (The Movie Database)
 
+### Fonts
+- [Mr Eaves XL](https://fonts.adobe.com/fonts/mr-eaves-xl)
+- [Rift](https://fonts.adobe.com/fonts/rift)
 
 ### API
 <details>
-<summary>Sample API element</summary>
+<summary>Sample API result</summary>
 
 ```
 {
