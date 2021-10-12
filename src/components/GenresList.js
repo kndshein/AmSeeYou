@@ -12,13 +12,16 @@ const GenresList = ({ genres }) => {
   });
 
   const classNameColor = (e) => {
-    var className;
+    let className;
     switch (e) {
       case 28:
         className = "genre-action";
         break;
       case 12:
         className = "genre-adventure";
+        break;
+      case 16:
+        className = "genre-animation";
         break;
       case 35:
         className = "genre-comedy";
