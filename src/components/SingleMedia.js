@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-
+import rawMediaList from "../utilities/rawMediaList.json";
 import Movie from "./Movie";
 import Show from "./Show";
 
-const SingleMedia = ({ moviesOnly, rawMediaList, mediaListRef }) => {
+const SingleMedia = ({ moviesOnly, mediaListRef }) => {
   const [toggleState, setToggleState] = useState(null);
 
   const handleClick = (index) => {
