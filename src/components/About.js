@@ -54,43 +54,24 @@ const About = ({ setAboutOpen }) => {
         <table>
           <tbody>
             <tr>
-              <td>1.0.1</td>
-              <td>Jan 2021</td>
+              <td>2.3.2</td>
+              <td>Oct 2021</td>
               <td>
-                <i>AmSeeYou</i> was born.
+                Added <i>What If...?</i>. Refactored genre CSS styling.
               </td>
             </tr>
             <tr>
-              <td>1.0.2</td>
-              <td>Feb 2021</td>
-              <td>Fixed visual and technical bugs.</td>
-            </tr>
-            <tr>
-              <td>1.0.3</td>
-              <td>Mar 2021</td>
-              <td>Minor UX improvements.</td>
-            </tr>
-            <tr>
-              <td>1.0.4</td>
-              <td>May 2021</td>
-              <td>Minor deployment fixes.</td>
-            </tr>
-            <tr>
-              <td>1.1.0</td>
-              <td>Jul 2021</td>
+              <td>2.3.1</td>
+              <td>Sep 2021</td>
               <td>
-                Added <i>Black Widow</i>. Added casts. Increased accessibilty.
+                Added <i>Shang-Chi and the Legend of Ten Rings</i>. Refactored
+                media json.
               </td>
             </tr>
             <tr>
-              <td>2.0.0</td>
+              <td>2.3.0</td>
               <td>Jul 2021</td>
-              <td>Added TV shows and accompanying episodes.</td>
-            </tr>
-            <tr>
-              <td>2.1.0</td>
-              <td>Jul 2021</td>
-              <td>Refactored API calls.</td>
+              <td>Added "Movies Only" filter and About card.</td>
             </tr>
             <tr>
               <td>2.2.0</td>
@@ -101,16 +82,42 @@ const About = ({ setAboutOpen }) => {
               </td>
             </tr>
             <tr>
-              <td>2.3.0</td>
+              <td>2.1.0</td>
               <td>Jul 2021</td>
-              <td>Added "Movies Only" filter and About card.</td>
+              <td>Refactored API calls.</td>
             </tr>
             <tr>
-              <td>2.3.1</td>
-              <td>Sep 2021</td>
+              <td>2.0.0</td>
+              <td>Jul 2021</td>
+              <td>Added TV shows and accompanying episodes.</td>
+            </tr>
+            <tr>
+              <td>1.1.0</td>
+              <td>Jul 2021</td>
               <td>
-                Added <i>Shang-Chi and the Legend of Ten Rings</i>. Refactored
-                media json.
+                Added <i>Black Widow</i>. Added casts. Increased accessibilty.
+              </td>
+            </tr>
+            <tr>
+              <td>1.0.4</td>
+              <td>May 2021</td>
+              <td>Minor deployment fixes.</td>
+            </tr>
+            <tr>
+              <td>1.0.3</td>
+              <td>Mar 2021</td>
+              <td>Minor UX improvements.</td>
+            </tr>
+            <tr>
+              <td>1.0.2</td>
+              <td>Feb 2021</td>
+              <td>Fixed visual and technical bugs.</td>
+            </tr>
+            <tr>
+              <td>1.0.1</td>
+              <td>Jan 2021</td>
+              <td>
+                <i>AmSeeYou</i> was born.
               </td>
             </tr>
           </tbody>
