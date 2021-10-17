@@ -54,6 +54,14 @@ const About = ({ setAboutOpen }) => {
         <table>
           <tbody>
             <tr>
+              <td>2.4.0</td>
+              <td>Oct 2021</td>
+              <td>
+                Added labels for better differentiation between movies and
+                shows.
+              </td>
+            </tr>
+            <tr>
               <td>2.3.2</td>
               <td>Oct 2021</td>
               <td>
@@ -99,22 +107,22 @@ const About = ({ setAboutOpen }) => {
               </td>
             </tr>
             <tr>
-              <td>1.0.4</td>
+              <td>1.0.3</td>
               <td>May 2021</td>
               <td>Minor deployment fixes.</td>
             </tr>
             <tr>
-              <td>1.0.3</td>
+              <td>1.0.2</td>
               <td>Mar 2021</td>
               <td>Minor UX improvements.</td>
             </tr>
             <tr>
-              <td>1.0.2</td>
+              <td>1.0.1</td>
               <td>Feb 2021</td>
               <td>Fixed visual and technical bugs.</td>
             </tr>
             <tr>
-              <td>1.0.1</td>
+              <td>1.0.0</td>
               <td>Jan 2021</td>
               <td>
                 <i>AmSeeYou</i> was born.
