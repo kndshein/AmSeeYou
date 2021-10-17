@@ -385,6 +385,48 @@ td {
   font-size: 2rem;
 }
 
+.type-title {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0px;
+  height: 22px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  background-color: var(--main);
+  /* transition: opacity 0.5s; */
+}
+
+.type-title.movie {
+  color: var(--liteAccent);
+}
+
+.type-title.show {
+  color: #ffa17c;
+}
+
+.type-title.show-type {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.type-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -22px;
+  border: 11px solid transparent;
+  border-top-color: var(--main);
+  border-right-color: var(--main);
+  display: inline-block;
+}
+
 .single-movie:hover .movie-title,
 .single-movie.active .movie-title {
   color: rgba(255, 255, 255, 1);
@@ -394,6 +436,7 @@ td {
 
 .single-movie.active .movie-title {
   color: rgba(110, 110, 110, 0.3);
+  text-shadow: none;
   transition: ease-in-out 0.3s;
 }
 

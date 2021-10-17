@@ -5,7 +5,14 @@ import dateString from "../utilities/dateCalc";
 import Loading from "./Loading";
 
 const Show = (props) => {
-  const { rawShowData, toggleState, handleClick, handleKey, index } = props;
+  const {
+    rawShowData,
+    toggleState,
+    handleClick,
+    handleKey,
+    index,
+    moviesOnly,
+  } = props;
   const [showData, setShowData] = useState(null);
   const [backdropLoaded, setBackdropLoaded] = useState(false);
   const { REACT_APP_APIKEY } = process.env;
@@ -61,6 +68,9 @@ const Show = (props) => {
         </div>
         <div className="movie-title">
           <h2>{`${showData.original_name} Season ${rawShowData.season}`}</h2>
+        </div>
+        <div className={`type-title show ${!moviesOnly ? "show-type" : ""}`}>
+          Show
         </div>
         <div className="movie-active-container">
           <div className="movie-active-top">

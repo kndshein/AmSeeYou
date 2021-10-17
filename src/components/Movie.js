@@ -6,7 +6,14 @@ import GenresList from "./GenresList";
 import Loading from "./Loading";
 
 const Movie = (props) => {
-  const { rawMovieData, toggleState, handleClick, handleKey, index } = props;
+  const {
+    rawMovieData,
+    toggleState,
+    handleClick,
+    handleKey,
+    index,
+    moviesOnly,
+  } = props;
   const [movieData, setMovieData] = useState();
   const [backdropLoaded, setBackdropLoaded] = useState(false);
   const { REACT_APP_APIKEY } = process.env;
@@ -64,6 +71,9 @@ const Movie = (props) => {
         </div>
         <div className="movie-title">
           <h2>{movieData.original_title}</h2>
+        </div>
+        <div className={`type-title movie ${!moviesOnly ? "show-type" : ""}`}>
+          Movie
         </div>
         <div className="movie-active-container">
           <div className="movie-active-top">

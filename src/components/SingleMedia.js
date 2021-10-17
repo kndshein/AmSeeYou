@@ -37,6 +37,7 @@ const SingleMedia = ({ moviesOnly, mediaListRef }) => {
                 handleKey={handleKey}
                 index={index}
                 mediaListRef={mediaListRef}
+                moviesOnly={moviesOnly}
               />
             ) : (
               !moviesOnly && (
@@ -47,6 +48,7 @@ const SingleMedia = ({ moviesOnly, mediaListRef }) => {
                   handleClick={handleClick}
                   handleKey={handleKey}
                   index={index}
+                  moviesOnly={moviesOnly}
                 />
               )
             )}
