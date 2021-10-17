@@ -11,6 +11,7 @@ const Show = (props) => {
   const { REACT_APP_APIKEY } = process.env;
 
   useEffect(() => {
+    let controller = new AbortController();
     const getMedia = async () => {
       try {
         const response = await fetch(
@@ -18,7 +19,8 @@ const Show = (props) => {
             rawShowData.id
           }?api_key=${REACT_APP_APIKEY}&language=en-US&append_to_response=credits${
             rawShowData.type === "tv" ? `,season/${rawShowData.season}` : ""
-          }`
+          }`,
+          { signal: controller.signal }
         );
         const data = await response.json();
         setShowData(data);
@@ -27,6 +29,7 @@ const Show = (props) => {
       }
     };
     getMedia();
+    return () => controller?.abort();
   }, [rawShowData, REACT_APP_APIKEY]);
 
   const ComponentLoading = () => {
