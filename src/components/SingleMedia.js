@@ -27,10 +27,15 @@ const SingleMedia = ({ moviesOnly, mediaListRef }) => {
     <>
       {rawMediaList.map((element, index) => {
         return (
-          <>
+          <React.Fragment
+            key={`${element.id}${
+              element.type === "tv"
+                ? `${element.season}${element.epiStart}${element.epiEnd}`
+                : ""
+            }`}
+          >
             {element.type === "movie" ? (
               <Movie
-                key={index}
                 rawMovieData={element}
                 toggleState={toggleState}
                 handleClick={handleClick}
@@ -42,7 +47,6 @@ const SingleMedia = ({ moviesOnly, mediaListRef }) => {
             ) : (
               !moviesOnly && (
                 <Show
-                  key={index}
                   rawShowData={element}
                   toggleState={toggleState}
                   handleClick={handleClick}
@@ -52,7 +56,7 @@ const SingleMedia = ({ moviesOnly, mediaListRef }) => {
                 />
               )
             )}
-          </>
+          </React.Fragment>
         );
       })}
       <div id="empty-margin"></div>;

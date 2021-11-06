@@ -54,6 +54,13 @@ const About = ({ setAboutOpen }) => {
         <table>
           <tbody>
             <tr>
+              <td>2.4.1</td>
+              <td>Nov 2021</td>
+              <td>
+                Added <i>Eternals</i>.
+              </td>
+            </tr>
+            <tr>
               <td>2.4.0</td>
               <td>Oct 2021</td>
               <td>
