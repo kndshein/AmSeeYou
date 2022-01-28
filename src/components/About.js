@@ -1,5 +1,5 @@
-import React from "react";
-import { IoMdClose } from "react-icons/io";
+import React from 'react';
+import { IoMdClose } from 'react-icons/io';
 
 const About = ({ setAboutOpen }) => {
   return (
@@ -17,7 +17,7 @@ const About = ({ setAboutOpen }) => {
           <p>
             <span>AmSeeYou</span> showcases and cherishes the Marvel Cinematic
             Universe (MCU) films and TV shows. This website presents the entire
-            universe in in-universe chronological order from{" "}
+            universe in in-universe chronological order from{' '}
             <a
               href="https://www.digitalspy.com/movies/a825774/marvel-cinematic-universe-in-chronological-order/"
               target="_blank"
@@ -53,6 +53,13 @@ const About = ({ setAboutOpen }) => {
         </div>
         <table>
           <tbody>
+            <tr>
+              <td>2.4.2</td>
+              <td>Jan 2022</td>
+              <td>
+                Added <i>Spider-Man: No Way Home</i> and <i>Hawkeye</i>.
+              </td>
+            </tr>
             <tr>
               <td>2.4.1</td>
               <td>Nov 2021</td>
@@ -138,23 +145,23 @@ const About = ({ setAboutOpen }) => {
           </tbody>
         </table>
         <p>
-          Special shoutout to{" "}
+          Special shoutout to{' '}
           <a
             href="https://www.themoviedb.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
             TMDB
-          </a>{" "}
-          for the API, and{" "}
+          </a>{' '}
+          for the API, and{' '}
           <a
             href="https://30000fps.com/#"
             target="_blank"
             rel="noopener noreferrer"
           >
             30000fps
-          </a>{" "}
-          for the{" "}
+          </a>{' '}
+          for the{' '}
           <a
             href="https://giphy.com/gifs/loop-sci-fi-XmppNRlrlu2SA"
             target="_blank"
