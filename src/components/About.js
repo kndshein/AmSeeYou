@@ -43,12 +43,14 @@ const About = ({ setAboutOpen }) => {
         <table>
           <tbody>
             <tr>
-              <td>2.4.3</td>
+              <td>2.5.0</td>
               <td>Jan 2022</td>
               <td>
                 Added <i>Doctor Strange in the Multiverse of Madness</i>, <i>Moon Knight</i>, and{' '}
                 <i>Thor: Love and Thunder</i>.
               </td>
+              <td>Made the app more responsive on ultrawide screens.</td>
+              <td>Misc. CSS fixes.</td>
             </tr>
             <tr>
               <td>2.4.2</td>
