@@ -5,19 +5,14 @@ const About = ({ setAboutOpen }) => {
   return (
     <div className="about-card">
       <div className="about-text">
-        <button
-          className="close-button"
-          onClick={() => setAboutOpen(false)}
-          tabIndex="1"
-        >
+        <button className="close-button" onClick={() => setAboutOpen(false)} tabIndex="1">
           <IoMdClose />
         </button>
         <h1 className="about-title">AmSeeYou</h1>
         <div className="about-body">
           <p>
-            <span>AmSeeYou</span> showcases and cherishes the Marvel Cinematic
-            Universe (MCU) films and TV shows. This website presents the entire
-            universe in in-universe chronological order from{' '}
+            <span>AmSeeYou</span> showcases and cherishes the Marvel Cinematic Universe (MCU) films and TV
+            shows. This website presents the entire universe in in-universe chronological order from{' '}
             <a
               href="https://www.digitalspy.com/movies/a825774/marvel-cinematic-universe-in-chronological-order/"
               target="_blank"
@@ -28,31 +23,33 @@ const About = ({ setAboutOpen }) => {
             .
           </p>
           <p>
-            The project was conceived in January of 2021 as a class project
-            after having learned what React was just a week prior. During the
-            project, I fell in love with the process of bringing json objects to
-            life -- it's satisfyingly beautiful. Even though the project is long
-            over, I have been adding new features and building on existing code
-            ever since.
+            The project was conceived in January of 2021 as a class project after having learned what React
+            was just a week prior. During the project, I fell in love with the process of bringing json
+            objects to life -- it's satisfyingly beautiful. Even though the project is long over, I have been
+            adding new features and building on existing code ever since.
           </p>
           <p>
-            I will continue to maintain the site as long as it still brings me
-            joy. Here's to small things in life!
+            I will continue to maintain the site as long as it still brings me joy. Here's to small things in
+            life!
           </p>
           <p>
             Warmly,
             <br /> Kaung <br />
-            <a
-              href="https://knds.art"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://knds.art" target="_blank" rel="noopener noreferrer">
               knds.art
             </a>
           </p>
         </div>
         <table>
           <tbody>
+            <tr>
+              <td>2.4.3</td>
+              <td>Jan 2022</td>
+              <td>
+                Added <i>Doctor Strange in the Multiverse of Madness</i>, <i>Moon Knight</i>, and{' '}
+                <i>Thor: Love and Thunder</i>.
+              </td>
+            </tr>
             <tr>
               <td>2.4.2</td>
               <td>Jan 2022</td>
@@ -70,10 +67,7 @@ const About = ({ setAboutOpen }) => {
             <tr>
               <td>2.4.0</td>
               <td>Oct 2021</td>
-              <td>
-                Added labels for better differentiation between movies and
-                shows.
-              </td>
+              <td>Added labels for better differentiation between movies and shows.</td>
             </tr>
             <tr>
               <td>2.3.2</td>
@@ -86,8 +80,7 @@ const About = ({ setAboutOpen }) => {
               <td>2.3.1</td>
               <td>Sep 2021</td>
               <td>
-                Added <i>Shang-Chi and the Legend of Ten Rings</i>. Refactored
-                media json.
+                Added <i>Shang-Chi and the Legend of Ten Rings</i>. Refactored media json.
               </td>
             </tr>
             <tr>
@@ -98,10 +91,7 @@ const About = ({ setAboutOpen }) => {
             <tr>
               <td>2.2.0</td>
               <td>Jul 2021</td>
-              <td>
-                Added loading spinners. Removed horizontal scroll. Added
-                scrollbar.
-              </td>
+              <td>Added loading spinners. Removed horizontal scroll. Added scrollbar.</td>
             </tr>
             <tr>
               <td>2.1.0</td>
@@ -146,19 +136,11 @@ const About = ({ setAboutOpen }) => {
         </table>
         <p>
           Special shoutout to{' '}
-          <a
-            href="https://www.themoviedb.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">
             TMDB
           </a>{' '}
           for the API, and{' '}
-          <a
-            href="https://30000fps.com/#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://30000fps.com/#" target="_blank" rel="noopener noreferrer">
             30000fps
           </a>{' '}
           for the{' '}
