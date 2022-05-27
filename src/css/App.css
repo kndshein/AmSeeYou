@@ -457,7 +457,7 @@ td {
 .movie-active-container {
   display: grid;
   grid-template-rows: fit-content(100px) auto;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: min(25%, 250px) auto;
   opacity: 0;
   position: absolute;
   padding: 30px 30px 30px 80px;
@@ -549,15 +549,15 @@ td {
   margin: 0;
   padding-left: 20px;
   color: white;
-  font-size: max(2.5rem, 3vw);
-  line-height: max(2.5rem, 3vw);
+  font-size: clamp(2.5rem, 3vw, 4.25rem);
+  line-height: clamp(2.5rem, 3vw, 4.25rem);
 }
 
 /* movie active tagline */
 .movie-active-tagline {
   margin: 10px 5px 10px 0;
   color: rgb(110, 110, 110);
-  font-size: max(1.25rem, 1.5vw);
+  font-size: clamp(1.25rem, 1.5vw, 2.25rem);
   font-style: italic;
   font-weight: 700;
   text-transform: uppercase;
@@ -577,7 +577,7 @@ td {
 
 .movie-active-subtitle span {
   margin-top: 20px;
-  font-size: max(1.25rem, 1.5vw);
+  font-size: clamp(1.25rem, 1.5vw, 2rem);
   margin-right: 10px;
   color: white;
 }
@@ -604,7 +604,7 @@ td {
 .actor {
   padding: 5px 10px 5px 10px;
   margin: 20px 10px 0 0;
-  font-size: max(1rem, 1vw);
+  font-size: clamp(1rem, 1vw, 1.5rem);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
 }
@@ -613,8 +613,8 @@ td {
 .movie-active-overview {
   margin-top: 20px;
   color: grey;
-  font-size: max(1.2rem, 1.2vw);
-  line-height: max(1.5rem, 1.5vw);
+  font-size: clamp(1.2rem, 1.2vw, 2.25rem);
+  line-height: clamp(1.5rem, 1.5vw, 2.5rem);
   width: 100%;
 }
 
