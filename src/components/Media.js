@@ -1,35 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import axiosRetry from 'axios-retry';
+import dateString from '../utilities/dateCalc';
+import runtimeString from '../utilities/runtimeCalc';
+import GenresList from './GenresList';
+import Loading from './Loading';
 
-import dateString from "../utilities/dateCalc";
-import runtimeString from "../utilities/runtimeCalc";
-import GenresList from "./GenresList";
-import Loading from "./Loading";
-
-const Movie = (props) => {
-  const {
-    rawMovieData,
-    toggleState,
-    handleClick,
-    handleKey,
-    index,
-    moviesOnly,
-  } = props;
+const Media = (props) => {
+  const { rawMovieData, toggleState, handleClick, handleKey, index, moviesOnly } = props;
   const [movieData, setMovieData] = useState();
   const [backdropLoaded, setBackdropLoaded] = useState(false);
   const { REACT_APP_APIKEY } = process.env;
 
+  axiosRetry(axios, { retries: 3, retryDelay: (retryCount) => retryCount * 2000 });
+
   useEffect(() => {
     const getMedia = async () => {
       try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/${rawMovieData.type}/${
+        const response = await axios({
+          method: 'GET',
+          url: `https://api.themoviedb.org/3/${rawMovieData.type}/${
             rawMovieData.id
           }?api_key=${REACT_APP_APIKEY}&language=en-US&append_to_response=credits${
-            rawMovieData.type === "tv" ? `,season/${rawMovieData.season}` : ""
-          }`
-        );
-        const data = await response.json();
-        setMovieData(data);
+            rawMovieData.type === 'tv' ? `,season/${rawMovieData.season}` : ''
+          }`,
+        });
+        setMovieData(response.data);
       } catch (err) {
         console.log(err);
       }
@@ -61,9 +57,7 @@ const Movie = (props) => {
         <div className="movie-backdrop">
           <img
             src={`https://image.tmdb.org/t/p/w1280${
-              movieData.backdrop_path
-                ? movieData.backdrop_path
-                : movieData.poster_path
+              movieData.backdrop_path ? movieData.backdrop_path : movieData.poster_path
             }`}
             alt={movieData.original_title}
             onLoad={() => setBackdropLoaded(true)}
@@ -72,9 +66,7 @@ const Movie = (props) => {
         <div className="movie-title">
           <h2>{movieData.original_title}</h2>
         </div>
-        <div className={`type-title movie ${!moviesOnly ? "show-type" : ""}`}>
-          Movie
-        </div>
+        <div className={`type-title movie ${!moviesOnly ? 'show-type' : ''}`}>Movie</div>
         <div className="movie-active-container">
           <div className="movie-active-top">
             <div className="movie-active-title">
@@ -97,9 +89,7 @@ const Movie = (props) => {
               <span className="dot">•</span>
               <span className="date">{dateString(movieData.release_date)}</span>
               <span className="dot">•</span>
-              <span className="runtime">
-                {runtimeString(movieData.runtime)}
-              </span>
+              <span className="runtime">{runtimeString(movieData.runtime)}</span>
             </div>
             <div className="cast">
               {movieData.credits.cast.slice(0, 5).map((actor, index) => {
@@ -119,9 +109,7 @@ const Movie = (props) => {
 
   return (
     <div
-      className={`single-movie${
-        toggleState?.active === index ? " active" : ""
-      }`}
+      className={`single-movie${toggleState?.active === index ? ' active' : ''}`}
       onClick={() => handleClick(index)}
       onKeyPress={(event) => handleKey(event, index)}
       tabIndex="0"
@@ -132,4 +120,4 @@ const Movie = (props) => {
   );
 };
 
-export default Movie;
+export default Media;
