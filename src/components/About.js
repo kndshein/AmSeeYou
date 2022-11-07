@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoMdClose } from 'react-icons/io';
+import patchNotes from '../utilities/patchNotes.json';
 
 const About = ({ setAboutOpen }) => {
   return (
@@ -9,7 +10,7 @@ const About = ({ setAboutOpen }) => {
           <IoMdClose />
         </button>
         <h1 className="about-title">AmSeeYou</h1>
-        <div className="about-body">
+        <section className="about-body">
           <p>
             <span>AmSeeYou</span> showcases and cherishes the Marvel Cinematic Universe (MCU) films and TV
             shows. This website presents the entire universe in in-universe chronological order from{' '}
@@ -39,101 +40,22 @@ const About = ({ setAboutOpen }) => {
               knds.art
             </a>
           </p>
-        </div>
-        <table>
+        </section>
+        <table className="about-table">
           <tbody>
-            <tr>
-              <td>2.5.0</td>
-              <td>Jan 2022</td>
-              <td>
-                Added <i>Doctor Strange in the Multiverse of Madness</i>, <i>Moon Knight</i>, and{' '}
-                <i>Thor: Love and Thunder</i>.
-              </td>
-              <td>Made the app more responsive on ultrawide screens.</td>
-              <td>Misc. CSS fixes.</td>
-            </tr>
-            <tr>
-              <td>2.4.2</td>
-              <td>Jan 2022</td>
-              <td>
-                Added <i>Spider-Man: No Way Home</i> and <i>Hawkeye</i>.
-              </td>
-            </tr>
-            <tr>
-              <td>2.4.1</td>
-              <td>Nov 2021</td>
-              <td>
-                Added <i>Eternals</i>.
-              </td>
-            </tr>
-            <tr>
-              <td>2.4.0</td>
-              <td>Oct 2021</td>
-              <td>Added labels for better differentiation between movies and shows.</td>
-            </tr>
-            <tr>
-              <td>2.3.2</td>
-              <td>Oct 2021</td>
-              <td>
-                Added <i>What If...?</i>. Refactored genre CSS styling.
-              </td>
-            </tr>
-            <tr>
-              <td>2.3.1</td>
-              <td>Sep 2021</td>
-              <td>
-                Added <i>Shang-Chi and the Legend of Ten Rings</i>. Refactored media json.
-              </td>
-            </tr>
-            <tr>
-              <td>2.3.0</td>
-              <td>Jul 2021</td>
-              <td>Added "Movies Only" filter and About card.</td>
-            </tr>
-            <tr>
-              <td>2.2.0</td>
-              <td>Jul 2021</td>
-              <td>Added loading spinners. Removed horizontal scroll. Added scrollbar.</td>
-            </tr>
-            <tr>
-              <td>2.1.0</td>
-              <td>Jul 2021</td>
-              <td>Refactored API calls.</td>
-            </tr>
-            <tr>
-              <td>2.0.0</td>
-              <td>Jul 2021</td>
-              <td>Added TV shows and accompanying episodes.</td>
-            </tr>
-            <tr>
-              <td>1.1.0</td>
-              <td>Jul 2021</td>
-              <td>
-                Added <i>Black Widow</i>. Added casts. Increased accessibilty.
-              </td>
-            </tr>
-            <tr>
-              <td>1.0.3</td>
-              <td>May 2021</td>
-              <td>Minor deployment fixes.</td>
-            </tr>
-            <tr>
-              <td>1.0.2</td>
-              <td>Mar 2021</td>
-              <td>Minor UX improvements.</td>
-            </tr>
-            <tr>
-              <td>1.0.1</td>
-              <td>Feb 2021</td>
-              <td>Fixed visual and technical bugs.</td>
-            </tr>
-            <tr>
-              <td>1.0.0</td>
-              <td>Jan 2021</td>
-              <td>
-                <i>AmSeeYou</i> was born.
-              </td>
-            </tr>
+            {[...patchNotes].reverse().map(({ version, date, notes }, idx) => {
+              return (
+                <tr key={version} className={`about-table-row ${idx === 0 && 'current'}`}>
+                  <td className="about-table-version">{version}</td>
+                  <td className="about-table-date">{date}</td>
+                  <td className="about-table-notes">
+                    {notes.map((note, idx) => (
+                      <span key={idx} dangerouslySetInnerHTML={{ __html: note }} />
+                    ))}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
         <p>

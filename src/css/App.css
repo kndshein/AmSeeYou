@@ -90,6 +90,7 @@ button.active {
 }
 
 .close-button {
+  z-index: 1;
   position: absolute;
   right: 2%;
   top: 3%;
@@ -114,7 +115,7 @@ button.active {
   background-color: var(--main);
   border-radius: 10px;
   font-size: 1.2rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.9px;
 }
 
 .about-title {
@@ -142,6 +143,43 @@ button.active {
 
 .about-text a:hover {
   color: white;
+}
+
+.about-body {
+  line-height: 1.4rem;
+}
+
+.about-table {
+  font-size: 0.9rem;
+}
+
+.about-table-row {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.about-table-row.current {
+  color: white;
+}
+
+.about-table-version {
+  width: 55px;
+  flex-shrink: 0;
+}
+
+.about-table-date {
+  width: 90px;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.about-table-notes {
+  display: flex;
+  flex-flow: column;
+}
+
+.about-table-notes span {
+  margin-bottom: 2px;
 }
 
 /* table */
