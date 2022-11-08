@@ -83,7 +83,7 @@ const Movie = (props) => {
           </div>
           <div className="movie-active-right">
             <div className="movie-active-subtitle">
-              <span className="vote-average">{movieData.vote_average}</span>
+              <span className="vote-average">{Math.round(movieData.vote_average * 10) / 10}</span>
               <span className="dot">•</span>
               <span className="date">{dateString(movieData.release_date)}</span>
               <span className="dot">•</span>

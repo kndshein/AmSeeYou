@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import GenresList from "./GenresList";
-import dateString from "../utilities/dateCalc";
-import Loading from "./Loading";
+import GenresList from './GenresList';
+import dateString from '../utilities/dateCalc';
+import Loading from './Loading';
 
 const Show = (props) => {
-  const {
-    rawShowData,
-    toggleState,
-    handleClick,
-    handleKey,
-    index,
-    moviesOnly,
-  } = props;
+  const { rawShowData, toggleState, handleClick, handleKey, index, moviesOnly } = props;
   const [showData, setShowData] = useState(null);
   const [backdropLoaded, setBackdropLoaded] = useState(false);
   const { REACT_APP_APIKEY } = process.env;
@@ -25,7 +18,7 @@ const Show = (props) => {
           `https://api.themoviedb.org/3/${rawShowData.type}/${
             rawShowData.id
           }?api_key=${REACT_APP_APIKEY}&language=en-US&append_to_response=credits${
-            rawShowData.type === "tv" ? `,season/${rawShowData.season}` : ""
+            rawShowData.type === 'tv' ? `,season/${rawShowData.season}` : ''
           }`,
           { signal: controller.signal }
         );
@@ -69,25 +62,20 @@ const Show = (props) => {
         <div className="movie-title">
           <h2>{`${showData.original_name} Season ${rawShowData.season}`}</h2>
         </div>
-        <div className={`type-title show ${!moviesOnly ? "show-type" : ""}`}>
-          Show
-        </div>
+        <div className={`type-title show ${!moviesOnly ? 'show-type' : ''}`}>Show</div>
         <div className="movie-active-container">
           <div className="movie-active-top">
             <div className="movie-active-title">
               <h1>{showData.original_name}</h1>
             </div>
             <div className="movie-active-tagline">
-              Season {rawShowData.season}, Episodes {rawShowData.epiStart} -{" "}
-              {rawShowData.epiEnd}
+              Season {rawShowData.season}, Episodes {rawShowData.epiStart} - {rawShowData.epiEnd}
             </div>
           </div>
           <div className="movie-active-left">
             <div className="movie-poster">
               <img
-                src={`https://image.tmdb.org/t/p/w342${
-                  showData[`season/${rawShowData.season}`].poster_path
-                }`}
+                src={`https://image.tmdb.org/t/p/w342${showData[`season/${rawShowData.season}`].poster_path}`}
                 alt={showData.original_name}
               />
             </div>
@@ -95,11 +83,9 @@ const Show = (props) => {
           </div>
           <div className={`movie-active-right ${rawShowData.type}`}>
             <div className="movie-active-subtitle">
-              <span className="vote-average">{showData.vote_average}</span>
+              <span className="vote-average">{Math.round(showData.vote_average * 10) / 10}</span>
               <span className="dot">•</span>
-              <span className="date">
-                {dateString(showData[`season/${rawShowData.season}`].air_date)}
-              </span>
+              <span className="date">{dateString(showData[`season/${rawShowData.season}`].air_date)}</span>
             </div>
             <div className="cast">
               {showData.credits.cast.slice(0, 5).map((actor, index) => {
@@ -127,8 +113,7 @@ const Show = (props) => {
                           src={`https://image.tmdb.org/t/p/w342${
                             element.still_path
                               ? element.still_path
-                              : showData[`season/${rawShowData.season}`]
-                                  .poster_path
+                              : showData[`season/${rawShowData.season}`].poster_path
                           }`}
                           alt={showData.original_name}
                         />
@@ -136,13 +121,9 @@ const Show = (props) => {
                       <div className="episode-description-container">
                         <div className="episode-name">
                           <span className="episode-name-season">{`Season ${element.season_number}, Episode ${element.episode_number} - `}</span>
-                          <span className="episode-name-name">
-                            {element.name}
-                          </span>
+                          <span className="episode-name-name">{element.name}</span>
                         </div>
-                        <div className="episode-description">
-                          {element.overview}
-                        </div>
+                        <div className="episode-description">{element.overview}</div>
                       </div>
                     </div>
                   );
@@ -156,9 +137,7 @@ const Show = (props) => {
 
   return (
     <div
-      className={`single-movie${
-        toggleState?.active === index ? " active" : ""
-      }`}
+      className={`single-movie${toggleState?.active === index ? ' active' : ''}`}
       onClick={() => handleClick(index)}
       onKeyPress={(event) => handleKey(event, index)}
       tabIndex="0"
