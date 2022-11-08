@@ -1,7 +1,6 @@
 import React from 'react';
 
 const GenresList = ({ genres }) => {
-  console.log(genres);
   genres.sort((a, b) => {
     if (a.name < b.name) {
       return -1;

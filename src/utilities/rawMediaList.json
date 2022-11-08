@@ -19,7 +19,7 @@
   { "type": "movie", "id": "1726-iron-man" },
   { "type": "movie", "id": "10138-iron-man-2" },
   { "type": "movie", "id": "1724-the-incredible-hulk" },
-  { "type": "movie", "id": "76122-marvel-one-shot-the-consultant" },
+  { "type": "misc", "id": "76122-marvel-one-shot-the-consultant" },
   { "type": "misc", "id": "76535-marvel-one-shot-a-funny-thing-happened-on-the-way-to-thor-s-hammer" },
   { "type": "movie", "id": "10195-thor" },
   { "type": "movie", "id": "24428-the-avengers" },
