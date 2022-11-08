@@ -1,5 +1,6 @@
 [
   { "type": "movie", "id": "1771-captain-america-the-first-avenger" },
+  { "type": "movie", "id": "211387-marvel-one-shot-agent-carter" },
   {
     "type": "tv",
     "id": "61550-marvel-s-agent-carter",
@@ -14,7 +15,6 @@
     "epiStart": 1,
     "epiEnd": 10
   },
-  { "type": "movie", "id": "211387-marvel-one-shot-agent-carter" },
   { "type": "movie", "id": "299537-captain-marvel" },
   { "type": "movie", "id": "1726-iron-man" },
   { "type": "movie", "id": "10138-iron-man-2" },
@@ -54,6 +54,11 @@
   },
   { "type": "movie", "id": "118340-guardians-of-the-galaxy" },
   { "type": "movie", "id": "283995-guardians-of-the-galaxy-2" },
+  { "type": "movie", "id": "1010818-groot-s-first-steps" },
+  { "type": "movie", "id": "1010819-the-little-guy" },
+  { "type": "movie", "id": "1010820-groot-s-pursuit" },
+  { "type": "movie", "id": "1010821-groot-takes-a-bath" },
+  { "type": "movie", "id": "1010823-magnum-opus" },
   {
     "type": "tv",
     "id": "61889-daredevil",
@@ -148,6 +153,8 @@
     "epiEnd": 13
   },
   { "type": "movie", "id": "271110-captain-america-civil-war" },
+  { "type": "movie", "id": "413279-team-thor" },
+  { "type": "movie", "id": "441829-team-thor-part-2" },
   { "type": "movie", "id": "497698-black-widow" },
   {
     "type": "tv",
@@ -194,8 +201,6 @@
     "epiEnd": 22
   },
   { "type": "movie", "id": "315635-spider-man-homecoming" },
-  { "type": "movie", "id": "413279-team-thor" },
-  { "type": "movie", "id": "441829-team-thor-part-2" },
   { "type": "movie", "id": "284053-thor-ragnarok" },
   { "type": "movie", "id": "505945-team-darryl" },
   {
@@ -327,7 +332,13 @@
     "epiEnd": 10
   },
   { "type": "movie", "id": "299534-avengers-endgame" },
-  { "type": "tv", "id": "84958-loki", "season": 1, "epiStart": 1, "epiEnd": 6 },
+  {
+    "type": "tv",
+    "id": "84958-loki",
+    "season": 1,
+    "epiStart": 1,
+    "epiEnd": 6
+  },
   {
     "type": "tv",
     "id": "91363-what-if",
@@ -353,6 +364,14 @@
   { "type": "movie", "id": "524434-eternals" },
   { "type": "movie", "id": "429617-spider-man-far-from-home" },
   { "type": "movie", "id": "634649-spider-man-no-way-home" },
+  { "type": "movie", "id": "453395-doctor-strange-in-the-multiverse-of-madness" },
+  {
+    "type": "tv",
+    "id": "92783-she-hulk-attorney-at-law",
+    "season": 1,
+    "epiStart": 1,
+    "epiEnd": 9
+  },
   {
     "type": "tv",
     "id": "88329-hawkeye",
@@ -367,6 +386,13 @@
     "epiStart": 1,
     "epiEnd": 6
   },
-  { "type": "movie", "id": "453395-doctor-strange-in-the-multiverse-of-madness" },
-  { "type": "movie", "id": "616037-thor-love-and-thunder" }
+  {
+    "type": "tv",
+    "id": "92782-ms-marvel",
+    "season": 1,
+    "epiStart": 1,
+    "epiEnd": 6
+  },
+  { "type": "movie", "id": "616037-thor-love-and-thunder" },
+  { "type": "movie", "id": "894205-werewolf-by-night" }
 ]

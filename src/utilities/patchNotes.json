@@ -45,5 +45,15 @@
       "Made the app more responsive on ultrawide screens.",
       "Misc. CSS fixes."
     ]
+  },
+  {
+    "version": "2.6.0",
+    "date": "Nov 2022",
+    "notes": [
+      "Updated patch notes system.",
+      "Reordered various media to reflect original source.",
+      "Added <i>I am Groot</i>, <i>She-Hulk</i>, <i>Ms. Marvel</i>, and <i>Werewolf by Night</i>",
+      "Fixed 'Too Many Requests' API bug."
+    ]
   }
 ]
