@@ -441,6 +441,10 @@ td {
   color: #ffa17c;
 }
 
+.type-title.misc {
+  color: #75ffbc;
+}
+
 .type-title.show-type {
   opacity: 1;
   transition: opacity 0.5s;

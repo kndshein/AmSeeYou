@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import rawMediaList from '../utilities/rawMediaList.json';
-import Media from './Media';
+import Movie from './Movie';
 import Show from './Show';
 
 const SingleMedia = ({ moviesOnly, mediaListRef }) => {
@@ -20,7 +20,7 @@ const SingleMedia = ({ moviesOnly, mediaListRef }) => {
   };
 
   if (moviesOnly) {
-    rawMediaList.filter((type) => type.type !== 'tv');
+    rawMediaList.filter((type) => type.type === 'movie');
   }
 
   return (
@@ -32,8 +32,8 @@ const SingleMedia = ({ moviesOnly, mediaListRef }) => {
               element.type === 'tv' ? `${element.season}${element.epiStart}${element.epiEnd}` : ''
             }`}
           >
-            {element.type === 'movie' ? (
-              <Media
+            {element.type === 'movie' && (
+              <Movie
                 rawMovieData={element}
                 toggleState={toggleState}
                 handleClick={handleClick}
@@ -42,17 +42,27 @@ const SingleMedia = ({ moviesOnly, mediaListRef }) => {
                 mediaListRef={mediaListRef}
                 moviesOnly={moviesOnly}
               />
-            ) : (
-              !moviesOnly && (
-                <Show
-                  rawShowData={element}
-                  toggleState={toggleState}
-                  handleClick={handleClick}
-                  handleKey={handleKey}
-                  index={index}
-                  moviesOnly={moviesOnly}
-                />
-              )
+            )}
+            {!moviesOnly && element.type === 'tv' && (
+              <Show
+                rawShowData={element}
+                toggleState={toggleState}
+                handleClick={handleClick}
+                handleKey={handleKey}
+                index={index}
+                moviesOnly={moviesOnly}
+              />
+            )}
+            {!moviesOnly && element.type === 'misc' && (
+              <Movie
+                rawMovieData={element}
+                toggleState={toggleState}
+                handleClick={handleClick}
+                handleKey={handleKey}
+                index={index}
+                mediaListRef={mediaListRef}
+                moviesOnly={moviesOnly}
+              />
             )}
           </React.Fragment>
         );

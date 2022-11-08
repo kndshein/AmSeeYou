@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const GenresList = ({ genres }) => {
+  console.log(genres);
   genres.sort((a, b) => {
     if (a.name < b.name) {
       return -1;
@@ -15,46 +16,52 @@ const GenresList = ({ genres }) => {
     let className;
     switch (e) {
       case 28:
-        className = "genre-action";
+        className = 'genre-action';
         break;
       case 12:
-        className = "genre-adventure";
+        className = 'genre-adventure';
         break;
       case 16:
-        className = "genre-animation";
+        className = 'genre-animation';
         break;
       case 35:
-        className = "genre-comedy";
+        className = 'genre-comedy';
         break;
       case 18:
-        className = "genre-drama";
+        className = 'genre-drama';
         break;
       case 14:
-        className = "genre-fantasy";
+        className = 'genre-fantasy';
         break;
       case 878:
-        className = "genre-science-fiction";
+        className = 'genre-science-fiction';
         break;
       case 53:
-        className = "genre-thriller";
+        className = 'genre-thriller';
+        break;
+      case 10751:
+        className = 'genre-family';
         break;
       case 10759:
-        className = "genre-aa";
+        className = 'genre-aa';
         break;
       case 10765:
-        className = "genre-sf";
+        className = 'genre-sf';
         break;
       case 80:
-        className = "genre-crime";
+        className = 'genre-crime';
         break;
       case 10768:
-        className = "genre-wp";
+        className = 'genre-wp';
         break;
       case 9648:
-        className = "genre-mystery";
+        className = 'genre-mystery';
+        break;
+      case 27:
+        className = 'genre-horror';
         break;
       default:
-        className = "genre-none";
+        className = 'genre-none';
     }
     return className;
   };

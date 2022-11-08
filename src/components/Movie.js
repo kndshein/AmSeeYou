@@ -6,7 +6,7 @@ import runtimeString from '../utilities/runtimeCalc';
 import GenresList from './GenresList';
 import Loading from './Loading';
 
-const Media = (props) => {
+const Movie = (props) => {
   const { rawMovieData, toggleState, handleClick, handleKey, index, moviesOnly } = props;
   const [movieData, setMovieData] = useState();
   const [backdropLoaded, setBackdropLoaded] = useState(false);
@@ -19,11 +19,7 @@ const Media = (props) => {
       try {
         const response = await axios({
           method: 'GET',
-          url: `https://api.themoviedb.org/3/${rawMovieData.type}/${
-            rawMovieData.id
-          }?api_key=${REACT_APP_APIKEY}&language=en-US&append_to_response=credits${
-            rawMovieData.type === 'tv' ? `,season/${rawMovieData.season}` : ''
-          }`,
+          url: `https://api.themoviedb.org/3/movie/${rawMovieData.id}?api_key=${REACT_APP_APIKEY}&language=en-US&append_to_response=credits`,
         });
         setMovieData(response.data);
       } catch (err) {
@@ -66,7 +62,9 @@ const Media = (props) => {
         <div className="movie-title">
           <h2>{movieData.original_title}</h2>
         </div>
-        <div className={`type-title movie ${!moviesOnly ? 'show-type' : ''}`}>Movie</div>
+        <div className={`type-title ${rawMovieData.type} ${!moviesOnly ? 'show-type' : ''}`}>
+          {rawMovieData.type}
+        </div>
         <div className="movie-active-container">
           <div className="movie-active-top">
             <div className="movie-active-title">
@@ -120,4 +118,4 @@ const Media = (props) => {
   );
 };
 
-export default Media;
+export default Movie;

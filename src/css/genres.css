@@ -28,7 +28,10 @@
 .genre-science-fiction::before,
 .genre-sf::before,
 .genre-thriller::before,
-.genre-wp::before {
+.genre-wp::before,
+.genre-family::before,
+.genre-horror::before,
+.genre-none::before {
   content: '';
   top: 0;
   left: 0;
@@ -87,4 +90,16 @@
 
 .genre-wp::before {
   background-color: rgb(109, 109, 109);
+}
+
+.genre-horror::before {
+  background-color: rgb(160, 32, 32);
+}
+
+.genre-family::before {
+  background-color: rgb(177, 129, 255);
+}
+
+.genre-none::before {
+  background-color: white;
 }
